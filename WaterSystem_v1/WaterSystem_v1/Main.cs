@@ -16,101 +16,69 @@ namespace WaterSystem_v1
         {
             InitializeComponent();
             OpentDashboard();
+        }       
+
+        private void lbl_MouseLeave(object sender, EventArgs e)
+        {
+            var control = (Control)sender;
+            control.BackColor = NormalLeftPanelColor();
         }
 
+        private void lbl_MouseMove(object sender, MouseEventArgs e)
+        {
+            var control = (Control)sender;
+            control.BackColor = SelectedLeftPanelColor();
+        }
+
+        private void lblHome_Click(object sender, EventArgs e)
+        {
+            OpentDashboard();
+        }      
+
+        private void lblMaster_Click(object sender, EventArgs e)
+        {
+            OpenMaster();
+        }        
+
+        private void lblInventory_Click(object sender, EventArgs e)
+        {
+            OpenInventory();
+        }  
+
+        #region Manual
+        // Left Panel Color
         private Color SelectedLeftPanelColor()
         {
-            return Color.FromArgb(31,43,55);
+            return Color.FromArgb(31, 43, 55);
         }
 
         private Color NormalLeftPanelColor()
         {
             return pnlLeftPanel.BackColor;
         }
-
-        private void lblHome_MouseHover(object sender, EventArgs e)
-        {
-          lblHome.BackColor =  SelectedLeftPanelColor();
-        }
-
-        private void lblHome_MouseLeave(object sender, EventArgs e)
-        {
-           lblHome.BackColor =   NormalLeftPanelColor();
-        }
-
-        private void lblTransaction_MouseHover(object sender, EventArgs e)
-        {
-            lblMaster.BackColor = SelectedLeftPanelColor();
-        }
-
-        private void lblTransaction_MouseLeave(object sender, EventArgs e)
-        {
-            lblMaster.BackColor = NormalLeftPanelColor();
-        }
-
-        private void lblTransaction_MouseHover_1(object sender, EventArgs e)
-        {
-            lblTransaction.BackColor = SelectedLeftPanelColor();
-        }
-
-        private void lblTransaction_MouseLeave_1(object sender, EventArgs e)
-        {
-            lblTransaction.BackColor = NormalLeftPanelColor();
-        }
-
-        private void lblInventory_MouseHover(object sender, EventArgs e)
-        {
-            lblInventory.BackColor = SelectedLeftPanelColor();
-        }
-
-        private void lblInventory_MouseLeave(object sender, EventArgs e)
-        {
-            lblInventory.BackColor = NormalLeftPanelColor();
-        }
-
-        private void lblReports_MouseHover(object sender, EventArgs e)
-        {
-            lblReports.BackColor = SelectedLeftPanelColor();
-        }
-
-        private void lblReports_MouseLeave(object sender, EventArgs e)
-        {
-            lblReports.BackColor = NormalLeftPanelColor();
-        }
-
-        private void lblTransaction_MouseMove(object sender, MouseEventArgs e)
-        {
-            lblTransaction.BackColor = SelectedLeftPanelColor();
-        }
-
-        private void lblHome_Click(object sender, EventArgs e)
-        {
-            OpentDashboard();
-        }
-
+        
+        // Open Dashboard tab
         private void OpentDashboard()
         {
             FrmDashboard dashboard = new FrmDashboard();
-            dashboard.TopLevel = false;
-            pnlContainer.Controls.Clear();
-            pnlContainer.Controls.Add(dashboard);
-            dashboard.Dock = DockStyle.Fill;
-            dashboard.Show();
+            Helpers.FormHelper.OpenFormInContainer(pnlContainer, dashboard);
         }
 
-        private void lblMaster_Click(object sender, EventArgs e)
-        {
-            OpenMaster();
-        }
-
+        //Open Master Tab
         private void OpenMaster()
         {
             FrmMasterContainer master = new FrmMasterContainer();
-            master.TopLevel = false;
-            pnlContainer.Controls.Clear();
-            pnlContainer.Controls.Add(master);
-            master.Dock = DockStyle.Fill;
-            master.Show();
+            Helpers.FormHelper.OpenFormInContainer(pnlContainer, master);
         }
+
+        // Open Invetory Tab
+        private void OpenInventory()
+        {
+            FrmInventoryContainer inventory = new FrmInventoryContainer();
+            Helpers.FormHelper.OpenFormInContainer(pnlContainer, inventory);
+        }
+
+        #endregion
+
     }
 }

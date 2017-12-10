@@ -46,11 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\FormHelper.cs" />
     <Compile Include="FrmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmDashboard.Designer.cs">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInventoryContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInventoryContainer.Designer.cs">
+      <DependentUpon>FrmInventoryContainer.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMasterContainer.cs">
       <SubType>Form</SubType>
@@ -68,6 +75,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmDashboard.resx">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInventoryContainer.resx">
+      <DependentUpon>FrmInventoryContainer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMasterContainer.resx">
       <DependentUpon>FrmMasterContainer.cs</DependentUpon>
@@ -100,6 +110,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WaterSystem_Manager\WaterSystem_Manager.csproj">
+      <Project>{529b4a2b-f05b-4f62-96cc-bb8144a1effd}</Project>
+      <Name>WaterSystem_Manager</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

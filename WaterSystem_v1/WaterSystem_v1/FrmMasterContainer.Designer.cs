@@ -50,12 +50,12 @@
             this.tabMasterContainer.Controls.Add(this.tabTransportation);
             this.tabMasterContainer.Controls.Add(this.tabAccount);
             this.tabMasterContainer.Controls.Add(this.tabSubAccount);
-            this.tabMasterContainer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tabMasterContainer.Location = new System.Drawing.Point(118, 0);
+            this.tabMasterContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabMasterContainer.Location = new System.Drawing.Point(0, 0);
             this.tabMasterContainer.Name = "tabMasterContainer";
             this.tabMasterContainer.Padding = new System.Drawing.Point(15, 10);
             this.tabMasterContainer.SelectedIndex = 0;
-            this.tabMasterContainer.Size = new System.Drawing.Size(517, 413);
+            this.tabMasterContainer.Size = new System.Drawing.Size(635, 413);
             this.tabMasterContainer.TabIndex = 0;
             // 
             // tabMeasurement
@@ -131,7 +131,7 @@
             // 
             this.tabSubAccount.Location = new System.Drawing.Point(4, 36);
             this.tabSubAccount.Name = "tabSubAccount";
-            this.tabSubAccount.Size = new System.Drawing.Size(509, 373);
+            this.tabSubAccount.Size = new System.Drawing.Size(627, 373);
             this.tabSubAccount.TabIndex = 7;
             this.tabSubAccount.Text = "SubAccount";
             this.tabSubAccount.UseVisualStyleBackColor = true;

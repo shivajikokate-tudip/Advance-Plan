@@ -41,12 +41,12 @@
             this.pnlHome = new System.Windows.Forms.Panel();
             this.lblHome = new System.Windows.Forms.Label();
             this.pnlLetTopHeader = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pnlTopHeader = new System.Windows.Forms.Panel();
-            this.lblDashboardTitle = new System.Windows.Forms.Label();
-            this.pnlContainer = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblDashboardTitle = new System.Windows.Forms.Label();
+            this.pnlContainer = new System.Windows.Forms.Panel();
             this.pnlLeftPanel.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -94,8 +94,8 @@
             this.lblReports.TabIndex = 0;
             this.lblReports.Text = "Reports";
             this.lblReports.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblReports.MouseLeave += new System.EventHandler(this.lblReports_MouseLeave);
-            this.lblReports.MouseHover += new System.EventHandler(this.lblReports_MouseHover);
+            this.lblReports.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
+            this.lblReports.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbl_MouseMove);
             // 
             // panel7
             // 
@@ -118,8 +118,9 @@
             this.lblInventory.TabIndex = 0;
             this.lblInventory.Text = "Inventory";
             this.lblInventory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblInventory.MouseLeave += new System.EventHandler(this.lblInventory_MouseLeave);
-            this.lblInventory.MouseHover += new System.EventHandler(this.lblInventory_MouseHover);
+            this.lblInventory.Click += new System.EventHandler(this.lblInventory_Click);
+            this.lblInventory.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
+            this.lblInventory.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbl_MouseMove);
             // 
             // pnlTransactions
             // 
@@ -142,9 +143,8 @@
             this.lblTransaction.TabIndex = 0;
             this.lblTransaction.Text = "Transaction";
             this.lblTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTransaction.MouseLeave += new System.EventHandler(this.lblTransaction_MouseLeave_1);
-            this.lblTransaction.MouseHover += new System.EventHandler(this.lblTransaction_MouseHover_1);
-            this.lblTransaction.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lblTransaction_MouseMove);
+            this.lblTransaction.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
+            this.lblTransaction.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbl_MouseMove);
             // 
             // pnlMaster
             // 
@@ -168,8 +168,8 @@
             this.lblMaster.Text = "Master";
             this.lblMaster.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblMaster.Click += new System.EventHandler(this.lblMaster_Click);
-            this.lblMaster.MouseLeave += new System.EventHandler(this.lblTransaction_MouseLeave);
-            this.lblMaster.MouseHover += new System.EventHandler(this.lblTransaction_MouseHover);
+            this.lblMaster.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
+            this.lblMaster.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbl_MouseMove);
             // 
             // pnlHome
             // 
@@ -193,8 +193,8 @@
             this.lblHome.Text = "Home";
             this.lblHome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblHome.Click += new System.EventHandler(this.lblHome_Click);
-            this.lblHome.MouseLeave += new System.EventHandler(this.lblHome_MouseLeave);
-            this.lblHome.MouseHover += new System.EventHandler(this.lblHome_MouseHover);
+            this.lblHome.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
+            this.lblHome.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbl_MouseMove);
             // 
             // pnlLetTopHeader
             // 
@@ -207,6 +207,15 @@
             this.pnlLetTopHeader.Size = new System.Drawing.Size(187, 55);
             this.pnlLetTopHeader.TabIndex = 0;
             // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::WaterSystem_v1.Properties.Resources.Logo;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Location = new System.Drawing.Point(130, 8);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(49, 37);
+            this.panel2.TabIndex = 0;
+            // 
             // pnlTopHeader
             // 
             this.pnlTopHeader.BackColor = System.Drawing.Color.MediumBlue;
@@ -218,27 +227,6 @@
             this.pnlTopHeader.Name = "pnlTopHeader";
             this.pnlTopHeader.Size = new System.Drawing.Size(604, 55);
             this.pnlTopHeader.TabIndex = 3;
-            // 
-            // lblDashboardTitle
-            // 
-            this.lblDashboardTitle.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblDashboardTitle.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDashboardTitle.ForeColor = System.Drawing.Color.White;
-            this.lblDashboardTitle.Location = new System.Drawing.Point(0, 0);
-            this.lblDashboardTitle.Name = "lblDashboardTitle";
-            this.lblDashboardTitle.Size = new System.Drawing.Size(265, 55);
-            this.lblDashboardTitle.TabIndex = 0;
-            this.lblDashboardTitle.Text = "Shiro ! PREMIUM";
-            this.lblDashboardTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnlContainer
-            // 
-            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.Location = new System.Drawing.Point(187, 55);
-            this.pnlContainer.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(604, 444);
-            this.pnlContainer.TabIndex = 4;
             // 
             // panel1
             // 
@@ -263,14 +251,26 @@
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = false;
             // 
-            // panel2
+            // lblDashboardTitle
             // 
-            this.panel2.BackgroundImage = global::WaterSystem_v1.Properties.Resources.Logo;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(130, 8);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(49, 37);
-            this.panel2.TabIndex = 0;
+            this.lblDashboardTitle.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblDashboardTitle.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDashboardTitle.ForeColor = System.Drawing.Color.White;
+            this.lblDashboardTitle.Location = new System.Drawing.Point(0, 0);
+            this.lblDashboardTitle.Name = "lblDashboardTitle";
+            this.lblDashboardTitle.Size = new System.Drawing.Size(265, 55);
+            this.lblDashboardTitle.TabIndex = 0;
+            this.lblDashboardTitle.Text = "Shiro ! PREMIUM";
+            this.lblDashboardTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlContainer
+            // 
+            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContainer.Location = new System.Drawing.Point(187, 55);
+            this.pnlContainer.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(604, 444);
+            this.pnlContainer.TabIndex = 4;
             // 
             // frmMain
             // 
