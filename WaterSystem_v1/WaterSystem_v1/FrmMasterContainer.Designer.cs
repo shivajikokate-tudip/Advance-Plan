@@ -57,6 +57,7 @@
             this.tabMasterContainer.SelectedIndex = 0;
             this.tabMasterContainer.Size = new System.Drawing.Size(635, 413);
             this.tabMasterContainer.TabIndex = 0;
+            this.tabMasterContainer.Click += new System.EventHandler(this.tabMasterContainer_Click);
             // 
             // tabMeasurement
             // 

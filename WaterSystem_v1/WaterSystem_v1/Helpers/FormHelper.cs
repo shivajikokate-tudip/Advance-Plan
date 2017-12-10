@@ -9,7 +9,7 @@ namespace WaterSystem_v1.Helpers
 {
    public static class FormHelper
     {
-        public static void OpenFormInContainer(Panel container, Form form)
+        public static void OpenFormInContainer(Control container, Form form)
         {
             form.TopLevel = false;
             container.Controls.Clear();

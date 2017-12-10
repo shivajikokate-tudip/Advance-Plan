@@ -5,3 +5,5 @@ D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_Manager\bin\Debug\WaterSyst
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_Manager\obj\Debug\WaterSystem_Manager.csprojResolveAssemblyReference.cache
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_Manager\obj\Debug\WaterSystem_Manager.dll
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_Manager\obj\Debug\WaterSystem_Manager.pdb
+D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_Manager\bin\Debug\WaterSystem_Connection.dll
+D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_Manager\bin\Debug\WaterSystem_Connection.pdb

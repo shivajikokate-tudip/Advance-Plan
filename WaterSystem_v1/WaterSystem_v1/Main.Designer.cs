@@ -41,12 +41,12 @@
             this.pnlHome = new System.Windows.Forms.Panel();
             this.lblHome = new System.Windows.Forms.Label();
             this.pnlLetTopHeader = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlTopHeader = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.lblDashboardTitle = new System.Windows.Forms.Label();
             this.pnlContainer = new System.Windows.Forms.Panel();
+            this.lblDashboardTitle = new System.Windows.Forms.Label();
             this.pnlLeftPanel.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -70,7 +70,7 @@
             this.pnlLeftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeftPanel.Location = new System.Drawing.Point(0, 0);
             this.pnlLeftPanel.Name = "pnlLeftPanel";
-            this.pnlLeftPanel.Size = new System.Drawing.Size(187, 499);
+            this.pnlLeftPanel.Size = new System.Drawing.Size(187, 486);
             this.pnlLeftPanel.TabIndex = 2;
             // 
             // panel8
@@ -85,6 +85,7 @@
             // 
             // lblReports
             // 
+            this.lblReports.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblReports.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblReports.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReports.ForeColor = System.Drawing.Color.White;
@@ -109,6 +110,7 @@
             // 
             // lblInventory
             // 
+            this.lblInventory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblInventory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblInventory.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInventory.ForeColor = System.Drawing.Color.White;
@@ -134,6 +136,7 @@
             // 
             // lblTransaction
             // 
+            this.lblTransaction.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblTransaction.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTransaction.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTransaction.ForeColor = System.Drawing.Color.White;
@@ -158,6 +161,7 @@
             // 
             // lblMaster
             // 
+            this.lblMaster.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblMaster.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblMaster.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaster.ForeColor = System.Drawing.Color.White;
@@ -183,6 +187,7 @@
             // 
             // lblHome
             // 
+            this.lblHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblHome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblHome.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHome.ForeColor = System.Drawing.Color.White;
@@ -199,7 +204,7 @@
             // pnlLetTopHeader
             // 
             this.pnlLetTopHeader.BackColor = System.Drawing.Color.MediumBlue;
-            this.pnlLetTopHeader.Controls.Add(this.panel2);
+            this.pnlLetTopHeader.Controls.Add(this.label1);
             this.pnlLetTopHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLetTopHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlLetTopHeader.Margin = new System.Windows.Forms.Padding(0);
@@ -207,14 +212,18 @@
             this.pnlLetTopHeader.Size = new System.Drawing.Size(187, 55);
             this.pnlLetTopHeader.TabIndex = 0;
             // 
-            // panel2
+            // label1
             // 
-            this.panel2.BackgroundImage = global::WaterSystem_v1.Properties.Resources.Logo;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(130, 8);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(49, 37);
-            this.panel2.TabIndex = 0;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label1.Font = new System.Drawing.Font("Mistral", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(187, 55);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "S";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlTopHeader
             // 
@@ -225,16 +234,16 @@
             this.pnlTopHeader.Location = new System.Drawing.Point(187, 0);
             this.pnlTopHeader.Margin = new System.Windows.Forms.Padding(0);
             this.pnlTopHeader.Name = "pnlTopHeader";
-            this.pnlTopHeader.Size = new System.Drawing.Size(604, 55);
+            this.pnlTopHeader.Size = new System.Drawing.Size(603, 55);
             this.pnlTopHeader.TabIndex = 3;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnLogOut);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(391, 0);
+            this.panel1.Location = new System.Drawing.Point(360, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(213, 55);
+            this.panel1.Size = new System.Drawing.Size(243, 55);
             this.panel1.TabIndex = 1;
             // 
             // btnLogOut
@@ -243,7 +252,7 @@
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOut.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.White;
-            this.btnLogOut.Location = new System.Drawing.Point(99, 16);
+            this.btnLogOut.Location = new System.Drawing.Point(142, 18);
             this.btnLogOut.Margin = new System.Windows.Forms.Padding(0);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(75, 23);
@@ -251,36 +260,37 @@
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = false;
             // 
-            // lblDashboardTitle
-            // 
-            this.lblDashboardTitle.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblDashboardTitle.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDashboardTitle.ForeColor = System.Drawing.Color.White;
-            this.lblDashboardTitle.Location = new System.Drawing.Point(0, 0);
-            this.lblDashboardTitle.Name = "lblDashboardTitle";
-            this.lblDashboardTitle.Size = new System.Drawing.Size(265, 55);
-            this.lblDashboardTitle.TabIndex = 0;
-            this.lblDashboardTitle.Text = "Shiro ! PREMIUM";
-            this.lblDashboardTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pnlContainer
             // 
             this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContainer.Location = new System.Drawing.Point(187, 55);
             this.pnlContainer.Margin = new System.Windows.Forms.Padding(0);
             this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(604, 444);
+            this.pnlContainer.Size = new System.Drawing.Size(603, 431);
             this.pnlContainer.TabIndex = 4;
+            // 
+            // lblDashboardTitle
+            // 
+            this.lblDashboardTitle.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblDashboardTitle.Font = new System.Drawing.Font("Harlow Solid Italic", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDashboardTitle.ForeColor = System.Drawing.Color.White;
+            this.lblDashboardTitle.Location = new System.Drawing.Point(0, 0);
+            this.lblDashboardTitle.Name = "lblDashboardTitle";
+            this.lblDashboardTitle.Size = new System.Drawing.Size(113, 55);
+            this.lblDashboardTitle.TabIndex = 0;
+            this.lblDashboardTitle.Text = "Shiro !";
+            this.lblDashboardTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(791, 499);
+            this.ClientSize = new System.Drawing.Size(790, 486);
             this.Controls.Add(this.pnlContainer);
             this.Controls.Add(this.pnlTopHeader);
             this.Controls.Add(this.pnlLeftPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(600, 300);
             this.Name = "frmMain";
             this.Text = "Shiro V1.0";
             this.pnlLeftPanel.ResumeLayout(false);
@@ -307,13 +317,13 @@
         private System.Windows.Forms.Panel pnlHome;
         private System.Windows.Forms.Label lblMaster;
         private System.Windows.Forms.Label lblHome;
-        private System.Windows.Forms.Label lblDashboardTitle;
         private System.Windows.Forms.Label lblReports;
         private System.Windows.Forms.Label lblInventory;
         private System.Windows.Forms.Label lblTransaction;
         private System.Windows.Forms.Panel pnlContainer;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnLogOut;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDashboardTitle;
     }
 }

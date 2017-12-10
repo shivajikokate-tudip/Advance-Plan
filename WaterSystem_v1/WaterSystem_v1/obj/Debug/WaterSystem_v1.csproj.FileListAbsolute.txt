@@ -13,3 +13,4 @@ D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.FrmInventoryContainer.resources
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\bin\Debug\WaterSystem_Manager.dll
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\bin\Debug\WaterSystem_Manager.pdb
+D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.FrmMeasurementDetails.resources

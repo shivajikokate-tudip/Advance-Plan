@@ -30,10 +30,7 @@
         {
             this.pnlMainContainer = new System.Windows.Forms.Panel();
             this.pnlRightContainer = new System.Windows.Forms.Panel();
-            this.pnlRightTopContainer = new System.Windows.Forms.Panel();
-            this.pnlRightBottomContainer = new System.Windows.Forms.Panel();
             this.pnlMainContainer.SuspendLayout();
-            this.pnlRightContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMainContainer
@@ -48,31 +45,12 @@
             // 
             // pnlRightContainer
             // 
-            this.pnlRightContainer.Controls.Add(this.pnlRightBottomContainer);
-            this.pnlRightContainer.Controls.Add(this.pnlRightTopContainer);
+            this.pnlRightContainer.BackColor = System.Drawing.Color.White;
             this.pnlRightContainer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlRightContainer.Location = new System.Drawing.Point(361, 0);
+            this.pnlRightContainer.Location = new System.Drawing.Point(404, 0);
             this.pnlRightContainer.Name = "pnlRightContainer";
-            this.pnlRightContainer.Size = new System.Drawing.Size(240, 402);
+            this.pnlRightContainer.Size = new System.Drawing.Size(197, 402);
             this.pnlRightContainer.TabIndex = 0;
-            // 
-            // pnlRightTopContainer
-            // 
-            this.pnlRightTopContainer.BackColor = System.Drawing.Color.Linen;
-            this.pnlRightTopContainer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlRightTopContainer.Location = new System.Drawing.Point(0, 0);
-            this.pnlRightTopContainer.Name = "pnlRightTopContainer";
-            this.pnlRightTopContainer.Size = new System.Drawing.Size(240, 203);
-            this.pnlRightTopContainer.TabIndex = 0;
-            // 
-            // pnlRightBottomContainer
-            // 
-            this.pnlRightBottomContainer.BackColor = System.Drawing.Color.Bisque;
-            this.pnlRightBottomContainer.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlRightBottomContainer.Location = new System.Drawing.Point(0, 185);
-            this.pnlRightBottomContainer.Name = "pnlRightBottomContainer";
-            this.pnlRightBottomContainer.Size = new System.Drawing.Size(240, 217);
-            this.pnlRightBottomContainer.TabIndex = 1;
             // 
             // FrmDashboard
             // 
@@ -84,7 +62,6 @@
             this.Name = "FrmDashboard";
             this.Text = "Dashboard";
             this.pnlMainContainer.ResumeLayout(false);
-            this.pnlRightContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -93,8 +70,6 @@
 
         private System.Windows.Forms.Panel pnlMainContainer;
         private System.Windows.Forms.Panel pnlRightContainer;
-        private System.Windows.Forms.Panel pnlRightBottomContainer;
-        private System.Windows.Forms.Panel pnlRightTopContainer;
     }
 }
 

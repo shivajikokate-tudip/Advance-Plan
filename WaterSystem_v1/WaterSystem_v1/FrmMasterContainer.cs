@@ -15,6 +15,20 @@ namespace WaterSystem_v1
         public FrmMasterContainer()
         {
             InitializeComponent();
+            if (tabMasterContainer.SelectedIndex == 0)
+            {
+                FrmMeasurementDetails measurement = new FrmMeasurementDetails();
+                Helpers.FormHelper.OpenFormInContainer(tabMeasurement, measurement);
+            }
+        }
+
+        private void tabMasterContainer_Click(object sender, EventArgs e)
+        {
+            if (tabMasterContainer.SelectedIndex == 0)
+            {
+                FrmMeasurementDetails measurement = new FrmMeasurementDetails();
+                Helpers.FormHelper.OpenFormInContainer(tabMeasurement, measurement);
+            }
         }
     }
 }
