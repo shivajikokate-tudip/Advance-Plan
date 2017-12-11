@@ -23,15 +23,13 @@ namespace WaterSystem_Repository {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ROHINI-PC;Initial Catalog=WaterSupplier_System;User ID=sa;password=sh" +
+            "ivajiraje")]
         public string ConnectionString {
             get {
                 return ((string)(this["ConnectionString"]));
-            }
-            set {
-                this["ConnectionString"] = value;
             }
         }
     }

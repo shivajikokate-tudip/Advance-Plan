@@ -61,7 +61,7 @@
             // 
             // tabMeasurement
             // 
-            this.tabMeasurement.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tabMeasurement.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabMeasurement.Location = new System.Drawing.Point(4, 36);
             this.tabMeasurement.Name = "tabMeasurement";
             this.tabMeasurement.Padding = new System.Windows.Forms.Padding(3);
@@ -72,7 +72,7 @@
             // 
             // tabItem
             // 
-            this.tabItem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tabItem.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabItem.Location = new System.Drawing.Point(4, 36);
             this.tabItem.Name = "tabItem";
             this.tabItem.Padding = new System.Windows.Forms.Padding(3);
@@ -92,7 +92,7 @@
             // 
             // tabSupplier
             // 
-            this.tabSupplier.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tabSupplier.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabSupplier.Location = new System.Drawing.Point(4, 36);
             this.tabSupplier.Name = "tabSupplier";
             this.tabSupplier.Size = new System.Drawing.Size(627, 373);
@@ -102,7 +102,7 @@
             // 
             // tabEmployee
             // 
-            this.tabEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tabEmployee.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabEmployee.Location = new System.Drawing.Point(4, 36);
             this.tabEmployee.Name = "tabEmployee";
             this.tabEmployee.Size = new System.Drawing.Size(627, 373);

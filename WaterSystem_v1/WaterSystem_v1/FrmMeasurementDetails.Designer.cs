@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.tblLayoutMeasurement = new System.Windows.Forms.TableLayoutPanel();
-            this.dgMeasurement = new System.Windows.Forms.DataGridView();
             this.pnlTopContainer = new System.Windows.Forms.Panel();
             this.pnlTopChildContainer = new System.Windows.Forms.Panel();
             this.pnlButtonLeft = new System.Windows.Forms.Panel();
@@ -39,8 +38,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnlClear = new System.Windows.Forms.Panel();
             this.pnlSearch = new System.Windows.Forms.Panel();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.tblLayoutMeasurement.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgMeasurement)).BeginInit();
             this.pnlTopContainer.SuspendLayout();
             this.pnlTopChildContainer.SuspendLayout();
             this.pnlButtonLeft.SuspendLayout();
@@ -51,8 +50,8 @@
             // 
             this.tblLayoutMeasurement.ColumnCount = 1;
             this.tblLayoutMeasurement.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblLayoutMeasurement.Controls.Add(this.dgMeasurement, 0, 1);
             this.tblLayoutMeasurement.Controls.Add(this.pnlTopContainer, 0, 0);
+            this.tblLayoutMeasurement.Controls.Add(this.listView1, 0, 1);
             this.tblLayoutMeasurement.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblLayoutMeasurement.Location = new System.Drawing.Point(0, 0);
             this.tblLayoutMeasurement.Name = "tblLayoutMeasurement";
@@ -61,15 +60,6 @@
             this.tblLayoutMeasurement.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.28134F));
             this.tblLayoutMeasurement.Size = new System.Drawing.Size(620, 359);
             this.tblLayoutMeasurement.TabIndex = 0;
-            // 
-            // dgMeasurement
-            // 
-            this.dgMeasurement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgMeasurement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgMeasurement.Location = new System.Drawing.Point(3, 141);
-            this.dgMeasurement.Name = "dgMeasurement";
-            this.dgMeasurement.Size = new System.Drawing.Size(614, 215);
-            this.dgMeasurement.TabIndex = 0;
             // 
             // pnlTopContainer
             // 
@@ -102,6 +92,7 @@
             // btnPreview
             // 
             this.btnPreview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(164)))), ((int)(((byte)(226)))));
+            this.btnPreview.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPreview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPreview.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnPreview.Location = new System.Drawing.Point(29, 10);
@@ -127,6 +118,7 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -150,6 +142,7 @@
             this.pnlClear.BackgroundImage = global::WaterSystem_v1.Properties.Resources.clear;
             this.pnlClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlClear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlClear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlClear.Location = new System.Drawing.Point(202, 22);
             this.pnlClear.Name = "pnlClear";
             this.pnlClear.Size = new System.Drawing.Size(20, 20);
@@ -160,10 +153,20 @@
             this.pnlSearch.BackgroundImage = global::WaterSystem_v1.Properties.Resources.search;
             this.pnlSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlSearch.Location = new System.Drawing.Point(51, 22);
             this.pnlSearch.Name = "pnlSearch";
             this.pnlSearch.Size = new System.Drawing.Size(20, 20);
             this.pnlSearch.TabIndex = 2;
+            // 
+            // listView1
+            // 
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.Location = new System.Drawing.Point(3, 141);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(614, 215);
+            this.listView1.TabIndex = 2;
+            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // FrmMeasurementDetails
             // 
@@ -177,7 +180,6 @@
             this.Name = "FrmMeasurementDetails";
             this.Text = "FrmMeasurementDetails";
             this.tblLayoutMeasurement.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgMeasurement)).EndInit();
             this.pnlTopContainer.ResumeLayout(false);
             this.pnlTopChildContainer.ResumeLayout(false);
             this.pnlButtonLeft.ResumeLayout(false);
@@ -190,7 +192,6 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tblLayoutMeasurement;
-        private System.Windows.Forms.DataGridView dgMeasurement;
         private System.Windows.Forms.Panel pnlTopContainer;
         private System.Windows.Forms.Panel pnlTopChildContainer;
         private System.Windows.Forms.TextBox textBox1;
@@ -200,5 +201,6 @@
         private System.Windows.Forms.Panel pnlButtonLeft;
         private System.Windows.Forms.Panel pnlSearch;
         private System.Windows.Forms.Panel pnlClear;
+        private System.Windows.Forms.ListView listView1;
     }
 }

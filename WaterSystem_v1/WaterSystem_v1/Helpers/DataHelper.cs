@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -255,26 +256,31 @@ namespace WaterSystem_v1.Helpers
             lvw1.FullRowSelect = true;
             lvw1.GridLines = true;
             lvw1.HeaderStyle = headerstyle;
+           
             if (ds.Tables.Count > 0)
             {
+                foreach (ListViewColumnsInfo column in columns)
+                {
+                    lvw1.Columns.Add(column.Header, column.Visible ? column.ColumnSize : 0);
+                }
+                lvw1.Columns.Add("Action", 100);
                 if (ds.Tables[Convert.ToInt32(tableno)].Rows.Count > 0)
                 {
-                    foreach (ListViewColumnsInfo column in columns)
-                    {
-                        lvw1.Columns.Add(column.Header, column.Visible ? column.ColumnSize : 0);
-                    }
                     foreach (DataRow dr in ds.Tables[Convert.ToInt32(tableno)].Rows)
                     {
                         lstitem = lvw1.Items.Add(dr[columns[0].ColNumber].ToString());
                         for (int j = 1; j < columns.Count; j++)
+                        {
                             lstitem.SubItems.Add(dr[columns[j].ColNumber].ToString());
-                    }
-                }
-                else
-                {
-                    foreach (ListViewColumnsInfo item in columns)
-                    {
-                        lvw1.Columns.Add(item.Header.ToString(), item.Visible ? item.ColumnSize : 0);
+                        }
+                        Button btn = new Button();
+                        btn.Text = "Click me";
+                        btn.BackColor = SystemColors.ButtonFace;
+                        Point p = lvw1.Items[2].Position;
+                        p.X -= 21;
+                        btn.Location = p;
+                        btn.Size = lvw1.Items[2].Bounds.Size;
+                        lvw1.Controls.Add(btn);
                     }
                 }
             }
@@ -294,13 +300,25 @@ namespace WaterSystem_v1.Helpers
                     {
                         lvw1.Columns.Add(column.Header, column.Visible ? column.ColumnSize : 0);
                     }
+                    lvw1.Columns.Add("Action", 100);
                     foreach (DataRow dr in ds.Tables[Convert.ToInt32(tableno)].Rows)
                     {
                         lstitem = lvw1.Items.Add(dr[columns[0].ColNumber].ToString());
                         if (tag_col_no.HasValue)
                             lstitem.Tag = dr[Int32.Parse(tag_col_no.ToString())].ToString();
                         for (int j = 1; j < columns.Count; j++)
+                        {
                             lstitem.SubItems.Add(dr[columns[j].ColNumber].ToString());
+                          
+                        }
+                        Button btn = new Button();
+                        btn.Text = "Click me";
+                        btn.BackColor = SystemColors.ButtonFace;
+                        Point p = lvw1.Items[0].SubItems[3].Bounds.Location;
+                        p.X -= 21;
+                        btn.Location = p;
+                        btn.Size = lvw1.Items[0].SubItems[3].Bounds.Size;
+                        lvw1.Controls.Add(btn);
                     }
                 }
                 else
