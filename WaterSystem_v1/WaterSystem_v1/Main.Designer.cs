@@ -45,8 +45,8 @@
             this.pnlTopHeader = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.pnlContainer = new System.Windows.Forms.Panel();
             this.lblDashboardTitle = new System.Windows.Forms.Label();
+            this.pnlContainer = new System.Windows.Forms.Panel();
             this.pnlLeftPanel.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -70,7 +70,7 @@
             this.pnlLeftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeftPanel.Location = new System.Drawing.Point(0, 0);
             this.pnlLeftPanel.Name = "pnlLeftPanel";
-            this.pnlLeftPanel.Size = new System.Drawing.Size(187, 486);
+            this.pnlLeftPanel.Size = new System.Drawing.Size(187, 511);
             this.pnlLeftPanel.TabIndex = 2;
             // 
             // panel8
@@ -234,14 +234,14 @@
             this.pnlTopHeader.Location = new System.Drawing.Point(187, 0);
             this.pnlTopHeader.Margin = new System.Windows.Forms.Padding(0);
             this.pnlTopHeader.Name = "pnlTopHeader";
-            this.pnlTopHeader.Size = new System.Drawing.Size(603, 55);
+            this.pnlTopHeader.Size = new System.Drawing.Size(747, 55);
             this.pnlTopHeader.TabIndex = 3;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnLogOut);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(360, 0);
+            this.panel1.Location = new System.Drawing.Point(504, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(243, 55);
             this.panel1.TabIndex = 1;
@@ -260,15 +260,6 @@
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = false;
             // 
-            // pnlContainer
-            // 
-            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.Location = new System.Drawing.Point(187, 55);
-            this.pnlContainer.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(603, 431);
-            this.pnlContainer.TabIndex = 4;
-            // 
             // lblDashboardTitle
             // 
             this.lblDashboardTitle.Dock = System.Windows.Forms.DockStyle.Left;
@@ -281,17 +272,27 @@
             this.lblDashboardTitle.Text = "Shiro !";
             this.lblDashboardTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pnlContainer
+            // 
+            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContainer.Location = new System.Drawing.Point(187, 55);
+            this.pnlContainer.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(747, 456);
+            this.pnlContainer.TabIndex = 4;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 486);
+            this.ClientSize = new System.Drawing.Size(934, 511);
             this.Controls.Add(this.pnlContainer);
             this.Controls.Add(this.pnlTopHeader);
             this.Controls.Add(this.pnlLeftPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(600, 300);
+            this.MinimumSize = new System.Drawing.Size(700, 400);
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Shiro V1.0";
             this.pnlLeftPanel.ResumeLayout(false);
             this.panel8.ResumeLayout(false);

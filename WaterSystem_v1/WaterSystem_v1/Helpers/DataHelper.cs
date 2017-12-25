@@ -1,9 +1,12 @@
-﻿using System;
+﻿using BrightIdeasSoftware;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,7 +27,7 @@ namespace WaterSystem_v1.Helpers
         public static string UserName = "";
         public static SortedList<string, string> glb = new SortedList<string, string>();
 
-        public void filllvw(ListView lvw1, DataSet ds, List<String> col, List<String> col_name, ColumnHeaderStyle headerstyle, int? tableno)
+        public void filllvw(System.Windows.Forms.ListView lvw1, DataSet ds, List<String> col, List<String> col_name, ColumnHeaderStyle headerstyle, int? tableno)
         {
             ListViewItem lstitem = new ListViewItem();
             lvw1.Columns.Clear();
@@ -63,7 +66,7 @@ namespace WaterSystem_v1.Helpers
                     }
                 }
         }
-        public void filllvw(ListView lvw1, DataSet ds, List<String> col, List<String> col_name, ColumnHeaderStyle headerstyle, int? tableno, int? tag_col_no)
+        public void filllvw(System.Windows.Forms.ListView lvw1, DataSet ds, List<String> col, List<String> col_name, ColumnHeaderStyle headerstyle, int? tableno, int? tag_col_no)
         {
             ListViewItem lstitem = new ListViewItem();
             lvw1.Columns.Clear();
@@ -103,7 +106,7 @@ namespace WaterSystem_v1.Helpers
                     }
                 }
         }
-        public void filllvw(ListView lvw1, DataSet ds, List<String> col, List<String> col_name, ColumnHeaderStyle headerstyle, int? tableno, int? tag_col_no, bool? items_clearYN)
+        public void filllvw(System.Windows.Forms.ListView lvw1, DataSet ds, List<String> col, List<String> col_name, ColumnHeaderStyle headerstyle, int? tableno, int? tag_col_no, bool? items_clearYN)
         {
             ListViewItem lstitem = new ListViewItem();
             if (items_clearYN == true)
@@ -145,7 +148,7 @@ namespace WaterSystem_v1.Helpers
                 }
         }
 
-        public void filllvw(ListView lvw1, DataSet ds, List<String> col, List<String> col_name, List<String> col_size, ColumnHeaderStyle headerstyle, int? tableno)
+        public void filllvw(System.Windows.Forms.ListView lvw1, DataSet ds, List<String> col, List<String> col_name, List<String> col_size, ColumnHeaderStyle headerstyle, int? tableno)
         {
             ListViewItem lstitem = new ListViewItem();
             lvw1.Columns.Clear();
@@ -177,7 +180,7 @@ namespace WaterSystem_v1.Helpers
                     }
                 }
         }
-        public void filllvw(ListView lvw1, DataSet ds, List<String> col, List<String> col_name, List<String> col_size, ColumnHeaderStyle headerstyle, int? tableno, int? tag_col_no)
+        public void filllvw(System.Windows.Forms.ListView lvw1, DataSet ds, List<String> col, List<String> col_name, List<String> col_size, ColumnHeaderStyle headerstyle, int? tableno, int? tag_col_no)
         {
             ListViewItem lstitem = new ListViewItem();
             lvw1.Columns.Clear();
@@ -211,7 +214,7 @@ namespace WaterSystem_v1.Helpers
                     }
                 }
         }
-        public void filllvw(ListView lvw1, DataSet ds, List<String> col, List<String> col_name, List<String> col_size, ColumnHeaderStyle headerstyle, int? tableno, int? tag_col_no, bool? items_clearYN)
+        public void filllvw(System.Windows.Forms.ListView lvw1, DataSet ds, List<String> col, List<String> col_name, List<String> col_size, ColumnHeaderStyle headerstyle, int? tableno, int? tag_col_no, bool? items_clearYN)
         {
             ListViewItem lstitem = new ListViewItem();
             if (items_clearYN == true)
@@ -249,7 +252,7 @@ namespace WaterSystem_v1.Helpers
                 }
         }
 
-        public void filllvw(ListView lvw1, DataSet ds, List<ListViewColumnsInfo> columns, ColumnHeaderStyle headerstyle, int? tableno)
+        public void filllvw(System.Windows.Forms.ListView lvw1, DataSet ds, List<ListViewColumnsInfo> columns, ColumnHeaderStyle headerstyle, int? tableno)
         {
             ListViewItem lstitem = new ListViewItem();
             lvw1.View = View.Details;
@@ -285,13 +288,14 @@ namespace WaterSystem_v1.Helpers
                 }
             }
         }
-        public void filllvw(ListView lvw1, DataSet ds, List<ListViewColumnsInfo> columns, ColumnHeaderStyle headerstyle, int? tableno, int? tag_col_no)
+        public void filllvw(System.Windows.Forms.ListView lvw1, DataSet ds, List<ListViewColumnsInfo> columns, ColumnHeaderStyle headerstyle, int? tableno, int? tag_col_no)
         {
             ListViewItem lstitem = new ListViewItem();
             lvw1.View = View.Details;
             lvw1.FullRowSelect = true;
             lvw1.GridLines = true;
             lvw1.HeaderStyle = headerstyle;
+            
             if (ds.Tables.Count > 0)
             {
                 if (ds.Tables[Convert.ToInt32(tableno)].Rows.Count > 0)
@@ -300,7 +304,7 @@ namespace WaterSystem_v1.Helpers
                     {
                         lvw1.Columns.Add(column.Header, column.Visible ? column.ColumnSize : 0);
                     }
-                    lvw1.Columns.Add("Action", 100);
+                    int index = 0;
                     foreach (DataRow dr in ds.Tables[Convert.ToInt32(tableno)].Rows)
                     {
                         lstitem = lvw1.Items.Add(dr[columns[0].ColNumber].ToString());
@@ -311,14 +315,7 @@ namespace WaterSystem_v1.Helpers
                             lstitem.SubItems.Add(dr[columns[j].ColNumber].ToString());
                           
                         }
-                        Button btn = new Button();
-                        btn.Text = "Click me";
-                        btn.BackColor = SystemColors.ButtonFace;
-                        Point p = lvw1.Items[0].SubItems[3].Bounds.Location;
-                        p.X -= 21;
-                        btn.Location = p;
-                        btn.Size = lvw1.Items[0].SubItems[3].Bounds.Size;
-                        lvw1.Controls.Add(btn);
+                        index++;
                     }
                 }
                 else
@@ -328,9 +325,11 @@ namespace WaterSystem_v1.Helpers
                         lvw1.Columns.Add(item.Header.ToString(), item.Visible ? item.ColumnSize : 0);
                     }
                 }
+               
+
             }
         }
-        public void filllvw(ListView lvw1, DataSet ds, List<ListViewColumnsInfo> columns, ColumnHeaderStyle headerstyle, int? tableno, int? tag_col_no, bool? items_clearYN)
+        public void filllvw(System.Windows.Forms.ListView lvw1, DataSet ds, List<ListViewColumnsInfo> columns, ColumnHeaderStyle headerstyle, int? tableno, int? tag_col_no, bool? items_clearYN)
         {
             ListViewItem lstitem = new ListViewItem();
             if (items_clearYN == true)
@@ -370,7 +369,7 @@ namespace WaterSystem_v1.Helpers
         }
 
 
-        public bool SearchTextInListView_on_column_bool(ListView lst, int column, string Search, bool exact)
+        public bool SearchTextInListView_on_column_bool(System.Windows.Forms.ListView lst, int column, string Search, bool exact)
         {
             bool vr = false;
             try
@@ -396,7 +395,7 @@ namespace WaterSystem_v1.Helpers
             return vr;
         }
 
-        public bool SearchTextInListView_bool(ListView lst, string Search)
+        public bool SearchTextInListView_bool(System.Windows.Forms.ListView lst, string Search)
         {
             bool vr = false;
             try
@@ -421,8 +420,8 @@ namespace WaterSystem_v1.Helpers
             { ex.Message.ToString(); }
             return vr;
         }
-        public delegate void SearchTextInListViewDelegate(ListView lst, string Search);
-        public void SearchTextInListView(ListView lst, string Search)
+        public delegate void SearchTextInListViewDelegate(System.Windows.Forms.ListView lst, string Search);
+        public void SearchTextInListView(System.Windows.Forms.ListView lst, string Search)
         {
             try
             {
@@ -452,7 +451,7 @@ namespace WaterSystem_v1.Helpers
             catch (Exception ex)
             { ex.Message.ToString(); }
         }
-        public void SearchTextInListView_on_column(ListView lst, int column, string Search)
+        public void SearchTextInListView_on_column(System.Windows.Forms.ListView lst, int column, string Search)
         {
             try
             {
@@ -474,7 +473,7 @@ namespace WaterSystem_v1.Helpers
             catch (Exception ex)
             { ex.Message.ToString(); }
         }
-        public void SearchTextInListView_on_column(ListView lst, int column, string Search, bool exact)
+        public void SearchTextInListView_on_column(System.Windows.Forms.ListView lst, int column, string Search, bool exact)
         {
             try
             {
@@ -499,7 +498,7 @@ namespace WaterSystem_v1.Helpers
         }
 
         // remove unselected items
-        private void RemoveUnselected(ListView lst)
+        private void RemoveUnselected(System.Windows.Forms.ListView lst)
         {
             int i = 0;
             while (true)
@@ -517,7 +516,7 @@ namespace WaterSystem_v1.Helpers
             }
         }
 
-        public void filllvw(ListView lvw1, DataSet ds, List<String> col, List<String> col_name, List<String> col_size, int? headerstyle, int? tableno, int? tag_col_no, bool? items_clearYN)
+        public void filllvw(System.Windows.Forms.ListView lvw1, DataSet ds, List<String> col, List<String> col_name, List<String> col_size, int? headerstyle, int? tableno, int? tag_col_no, bool? items_clearYN)
         {
             ListViewItem lstitem = new ListViewItem();
             if (items_clearYN == true)
@@ -635,7 +634,85 @@ namespace WaterSystem_v1.Helpers
             }
         }
 
+        public void GenerateListView(ObjectListView varListView, List<ListViewColumnsInfo> nameSizeList)
+        {
+
+            List<OLVColumn> columnsList = new List<OLVColumn>();
+            foreach (ListViewColumnsInfo nameSize in nameSizeList)
+            {
+                OLVColumn columnHeader = new BrightIdeasSoftware.OLVColumn();
+                columnHeader.Width = nameSize.ColumnSize;
+                columnHeader.Text = nameSize.Header;
+                columnHeader.IsVisible = nameSize.Visible;
+                columnHeader.AspectName = nameSize.Header;
+                if (nameSize.IsButton)
+                {
+                    columnHeader.IsButton = nameSize.IsButton;
+                    columnHeader.TextAlign = HorizontalAlignment.Center;
+                    columnHeader.ButtonSizing = OLVColumn.ButtonSizingMode.FixedBounds;
+                    columnHeader.ButtonSize = new Size(15, 15);
+                }
+                columnsList.Add(columnHeader);
+                varListView.AllColumns.Add(columnHeader);
+            }
+            varListView.Columns.AddRange(columnsList.Cast<System.Windows.Forms.ColumnHeader>().ToArray());
+        }
+
+        public string GetMemberName<T, TValue>(Expression<Func<T, TValue>> memberAccess)
+        {
+            return ((MemberExpression)memberAccess.Body).Member.Name;
+        }
+
+        #region Datatable to Object
+        public static List<T> CreateListFromTable<T>(DataTable tbl) where T : new()
+        {
+            // define return list
+            List<T> lst = new List<T>();
+
+            // go through each row
+            foreach (DataRow r in tbl.Rows)
+            {
+                // add to the list
+                lst.Add(CreateItemFromRow<T>(r));
+            }
+
+            // return the list
+            return lst;
+        }
+
+        // function that creates an object from the given data row
+        public static T CreateItemFromRow<T>(DataRow row) where T : new()
+        {
+            // create a new object
+            T item = new T();
+
+            // set the item
+            SetItemFromRow(item, row);
+
+            // return 
+            return item;
+        }
+
+        public static void SetItemFromRow<T>(T item, DataRow row) where T : new()
+        {
+            // go through each column
+            foreach (DataColumn c in row.Table.Columns)
+            {
+                // find the property for the column
+                PropertyInfo p = item.GetType().GetProperty(c.ColumnName);
+
+                // if exists, set the value
+                if (p != null && row[c] != DBNull.Value)
+                {
+                    p.SetValue(item, row[c], null);
+                }
+            }
+        }
+
+        #endregion
     }
+
+
 
     public class ListViewColumnsInfo
     {
@@ -643,5 +720,7 @@ namespace WaterSystem_v1.Helpers
         public string Header { get; set; }
         public int ColumnSize { get; set; }
         public bool Visible { get; set; }
+
+        public bool IsButton { get; set; }
     }
 }

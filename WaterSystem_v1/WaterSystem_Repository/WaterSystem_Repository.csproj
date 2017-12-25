@@ -46,6 +46,7 @@
       <DependentUpon>Database.settings</DependentUpon>
     </Compile>
     <Compile Include="DatabaseCommunication.cs" />
+    <Compile Include="MeasurementRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

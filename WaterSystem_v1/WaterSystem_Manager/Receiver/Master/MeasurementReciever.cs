@@ -4,30 +4,56 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WaterSystem_Model;
 using WaterSystem_Repository;
 
 namespace WaterSystem_Manager.Reciever
 {
     public class MeasurementReciever
     {
-        DatabaseCommunication dbCommunication = null;
+        MeasurementRepository _measurementRepo = null;
         public MeasurementReciever()
         {
-            dbCommunication = new DatabaseCommunication();
-        }
-        public void Add()
-        {
-
+            _measurementRepo = new MeasurementRepository();
         }
 
-        public void Update()
+        public IEnumerable<MeasurementModel> GetList()
         {
-
+            return ModelConverter.CreateListFromTable<MeasurementModel>(_measurementRepo.Retrieve().Tables[0]);
+        }
+        public void Add(MeasurementModel model)
+        {
+            model.Flag = DbConstants.Add;
+            DatabaseOperation(model);
         }
 
-        public DataSet GetList()
+        public void Update(MeasurementModel model)
         {
-           return dbCommunication.blFill("SP_MeasurementMaster");
+            model.Flag = DbConstants.Update;
+            DatabaseOperation(model);
+        }
+
+        public void Delete(MeasurementModel model)
+        {
+            model.Flag = DbConstants.Delete;
+            DatabaseOperation(model);
+        }
+
+        private void DatabaseOperation(MeasurementModel model)
+        {
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
+            parameters.Add("@MeasurmentId", model.MeasurmentId.ToString());
+            parameters.Add("@Measurement_Name", model.MeasurmentName);
+            parameters.Add("@IsActive", model.IsActive.ToString());
+            parameters.Add("@flag", model.Flag.ToString());
+            _measurementRepo.Save(parameters);
+        }
+
+        private class DbConstants
+        {
+            public static string Update = "U";
+            public static string Add = "A";
+            public static string Delete = "D";
         }
     }
 }

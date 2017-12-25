@@ -46,11 +46,107 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Demo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Demo.Designer.cs">
+      <DependentUpon>Demo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAccount.Designer.cs">
+      <DependentUpon>FrmAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddEditAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddEditAccount.Designer.cs">
+      <DependentUpon>FrmAddEditAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddEditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddEditCustomer.Designer.cs">
+      <DependentUpon>FrmAddEditCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddEditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddEditEmployee.Designer.cs">
+      <DependentUpon>FrmAddEditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddEditItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddEditItem.Designer.cs">
+      <DependentUpon>FrmAddEditItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddEditMeasurement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddEditMeasurement.Designer.cs">
+      <DependentUpon>FrmAddEditMeasurement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddEditSubAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddEditSubAccount.Designer.cs">
+      <DependentUpon>FrmAddEditSubAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddEditSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddEditSupplier.Designer.cs">
+      <DependentUpon>FrmAddEditSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddEditTransportation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddEditTransportation.Designer.cs">
+      <DependentUpon>FrmAddEditTransportation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCustomerDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCustomerDetails.Designer.cs">
+      <DependentUpon>FrmCustomerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmployeeDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmployeeDetails.Designer.cs">
+      <DependentUpon>FrmEmployeeDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmItemDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmItemDetails.Designer.cs">
+      <DependentUpon>FrmItemDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMeasurementDetails.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMeasurementDetails.Designer.cs">
       <DependentUpon>FrmMeasurementDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSubAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSubAccount.Designer.cs">
+      <DependentUpon>FrmSubAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSupplier.Designer.cs">
+      <DependentUpon>FrmSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTransportation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTransportation.Designer.cs">
+      <DependentUpon>FrmTransportation.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\DataHelper.cs" />
     <Compile Include="Helpers\FormHelper.cs" />
@@ -80,11 +176,50 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Demo.resx">
+      <DependentUpon>Demo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAccount.resx">
+      <DependentUpon>FrmAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddEditAccount.resx">
+      <DependentUpon>FrmAddEditAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddEditCustomer.resx">
+      <DependentUpon>FrmAddEditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddEditEmployee.resx">
+      <DependentUpon>FrmAddEditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddEditItem.resx">
+      <DependentUpon>FrmAddEditItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddEditMeasurement.resx">
+      <DependentUpon>FrmAddEditMeasurement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddEditSubAccount.resx">
+      <DependentUpon>FrmAddEditSubAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddEditSupplier.resx">
+      <DependentUpon>FrmAddEditSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddEditTransportation.resx">
+      <DependentUpon>FrmAddEditTransportation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCustomerDetails.resx">
+      <DependentUpon>FrmCustomerDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDashboard.resx">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmployeeDetails.resx">
+      <DependentUpon>FrmEmployeeDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInventoryContainer.resx">
       <DependentUpon>FrmInventoryContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmItemDetails.resx">
+      <DependentUpon>FrmItemDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMasterContainer.resx">
       <DependentUpon>FrmMasterContainer.cs</DependentUpon>
@@ -92,23 +227,41 @@
     <EmbeddedResource Include="FrmMeasurementDetails.resx">
       <DependentUpon>FrmMeasurementDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmSubAccount.resx">
+      <DependentUpon>FrmSubAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSupplier.resx">
+      <DependentUpon>FrmSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTransportation.resx">
+      <DependentUpon>FrmTransportation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\ImageResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ImageResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\ImageResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImageResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -119,12 +272,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Logo.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\ObjectListViewDemo\ObjectListView\ObjectListView2012.csproj">
+      <Project>{18feda0c-d147-4286-b39a-01204808106a}</Project>
+      <Name>ObjectListView2012</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ToggleSwitch\ToggleSwitch.csproj">
+      <Project>{49b88ffa-f02c-4709-ba65-9f8996444ecd}</Project>
+      <Name>ToggleSwitch</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WaterSystem_Manager\WaterSystem_Manager.csproj">
       <Project>{529b4a2b-f05b-4f62-96cc-bb8144a1effd}</Project>
       <Name>WaterSystem_Manager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WaterSystem_Model\WaterSystem_Models.csproj">
+      <Project>{934ece57-8110-4362-bc6c-9fab1fb5c221}</Project>
+      <Name>WaterSystem_Models</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +300,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Contents\clear.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Contents\active.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Contents\inactive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Contents\Button-Delete.png" />
+    <Content Include="Contents\edit.png" />
+    <Content Include="Contents\icon.ico" />
+    <Content Include="Contents\Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

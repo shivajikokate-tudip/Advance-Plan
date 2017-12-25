@@ -241,12 +241,10 @@ namespace WaterSystem_Connection
         public static DataSet ExecuteStoredProcedureWithParametersWithName(Dictionary<String, String> Parameters, string spName)
         {
             OpenConnection();
-            //bool connectionStatus = true;
-            //DataSet dataset = null;
-            String query = "execute " + spName + " ";
+            String query = string.Format("execute {0}", spName);
             foreach (KeyValuePair<string, string> k in Parameters)
             {
-                query = query + k.Key.ToString() + "=N'" + k.Value.ToString() + "',";
+                query = string.Format("{0} {1} =N'{2}',", query, k.Key.ToString(), k.Value.ToString());
             }
             query = (query.Trim().Remove(query.Length - 1)) + "";
 
@@ -255,8 +253,6 @@ namespace WaterSystem_Connection
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
             DataSet dataset = new DataSet();
             sqlDataAdapter.Fill(dataset);
-
-            //int rows = Convert.ToInt16(sqlCommand.ExecuteNonQuery());
             CloseConnection();
             return dataset;
         }

@@ -61,21 +61,21 @@ namespace WaterSystem_v1
         private void OpentDashboard()
         {
             FrmDashboard dashboard = new FrmDashboard();
-            Helpers.FormHelper.OpenFormInContainer(pnlContainer, dashboard);
+            Helpers.FormHelper.OpenForm(pnlContainer, dashboard);
         }
 
         //Open Master Tab
         private void OpenMaster()
         {
             FrmMasterContainer master = new FrmMasterContainer();
-            Helpers.FormHelper.OpenFormInContainer(pnlContainer, master);
+            Helpers.FormHelper.OpenForm(pnlContainer, master);
         }
 
         // Open Invetory Tab
         private void OpenInventory()
         {
             FrmInventoryContainer inventory = new FrmInventoryContainer();
-            Helpers.FormHelper.OpenFormInContainer(pnlContainer, inventory);
+            Helpers.FormHelper.OpenForm(pnlContainer, inventory);
         }
 
         #endregion

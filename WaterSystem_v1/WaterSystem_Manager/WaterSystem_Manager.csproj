@@ -40,13 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Factory\Master\MeasurementList.cs" />
-    <Compile Include="ICommand.cs" />
+    <Compile Include="ModelConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Receiver\Master\MeasurementReciever.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\WaterSystem_Model\WaterSystem_Models.csproj">
+      <Project>{934ece57-8110-4362-bc6c-9fab1fb5c221}</Project>
+      <Name>WaterSystem_Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WaterSystem_Repository\WaterSystem_Repository.csproj">
       <Project>{290d5037-f922-4a79-a6e6-06723eced920}</Project>
       <Name>WaterSystem_Repository</Name>

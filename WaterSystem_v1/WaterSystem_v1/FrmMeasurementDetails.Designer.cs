@@ -1,4 +1,6 @@
-﻿namespace WaterSystem_v1
+﻿using System.Windows.Forms;
+
+namespace WaterSystem_v1
 {
     partial class FrmMeasurementDetails
     {
@@ -28,66 +30,164 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tblLayoutMeasurement = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlOuter = new System.Windows.Forms.Panel();
+            this.pnlListContainer = new System.Windows.Forms.Panel();
             this.pnlTopContainer = new System.Windows.Forms.Panel();
-            this.pnlTopChildContainer = new System.Windows.Forms.Panel();
-            this.pnlButtonLeft = new System.Windows.Forms.Panel();
-            this.btnPreview = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlButtonContainer = new System.Windows.Forms.Panel();
+            this.pnlRight = new System.Windows.Forms.Panel();
             this.pnlButtonRight = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.pnlButtonLeft = new System.Windows.Forms.Panel();
+            this.pnlButtonLeftContainer = new System.Windows.Forms.Panel();
+            this.btnPreview = new System.Windows.Forms.Button();
+            this.ovlMeasurement = new BrightIdeasSoftware.ObjectListView();
             this.pnlClear = new System.Windows.Forms.Panel();
-            this.pnlSearch = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.tblLayoutMeasurement.SuspendLayout();
+            this.pnlOuter.SuspendLayout();
+            this.pnlListContainer.SuspendLayout();
             this.pnlTopContainer.SuspendLayout();
-            this.pnlTopChildContainer.SuspendLayout();
-            this.pnlButtonLeft.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.pnlButtonContainer.SuspendLayout();
+            this.pnlRight.SuspendLayout();
             this.pnlButtonRight.SuspendLayout();
+            this.pnlButtonLeft.SuspendLayout();
+            this.pnlButtonLeftContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ovlMeasurement)).BeginInit();
             this.SuspendLayout();
             // 
-            // tblLayoutMeasurement
+            // pnlOuter
             // 
-            this.tblLayoutMeasurement.ColumnCount = 1;
-            this.tblLayoutMeasurement.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblLayoutMeasurement.Controls.Add(this.pnlTopContainer, 0, 0);
-            this.tblLayoutMeasurement.Controls.Add(this.listView1, 0, 1);
-            this.tblLayoutMeasurement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblLayoutMeasurement.Location = new System.Drawing.Point(0, 0);
-            this.tblLayoutMeasurement.Name = "tblLayoutMeasurement";
-            this.tblLayoutMeasurement.RowCount = 2;
-            this.tblLayoutMeasurement.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.71866F));
-            this.tblLayoutMeasurement.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.28134F));
-            this.tblLayoutMeasurement.Size = new System.Drawing.Size(620, 359);
-            this.tblLayoutMeasurement.TabIndex = 0;
+            this.pnlOuter.Controls.Add(this.pnlListContainer);
+            this.pnlOuter.Controls.Add(this.pnlTopContainer);
+            this.pnlOuter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlOuter.Location = new System.Drawing.Point(0, 0);
+            this.pnlOuter.Name = "pnlOuter";
+            this.pnlOuter.Size = new System.Drawing.Size(624, 364);
+            this.pnlOuter.TabIndex = 0;
+            // 
+            // pnlListContainer
+            // 
+            this.pnlListContainer.Controls.Add(this.ovlMeasurement);
+            this.pnlListContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlListContainer.Location = new System.Drawing.Point(0, 161);
+            this.pnlListContainer.Name = "pnlListContainer";
+            this.pnlListContainer.Size = new System.Drawing.Size(624, 203);
+            this.pnlListContainer.TabIndex = 10;
             // 
             // pnlTopContainer
             // 
-            this.pnlTopContainer.Controls.Add(this.pnlTopChildContainer);
-            this.pnlTopContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlTopContainer.Location = new System.Drawing.Point(3, 3);
+            this.pnlTopContainer.Controls.Add(this.panel1);
+            this.pnlTopContainer.Controls.Add(this.pnlButtonContainer);
+            this.pnlTopContainer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTopContainer.Location = new System.Drawing.Point(0, 0);
             this.pnlTopContainer.Name = "pnlTopContainer";
-            this.pnlTopContainer.Size = new System.Drawing.Size(614, 132);
-            this.pnlTopContainer.TabIndex = 1;
+            this.pnlTopContainer.Size = new System.Drawing.Size(624, 161);
+            this.pnlTopContainer.TabIndex = 9;
             // 
-            // pnlTopChildContainer
+            // panel1
             // 
-            this.pnlTopChildContainer.Controls.Add(this.pnlButtonLeft);
-            this.pnlTopChildContainer.Controls.Add(this.pnlButtonRight);
-            this.pnlTopChildContainer.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlTopChildContainer.Location = new System.Drawing.Point(0, 63);
-            this.pnlTopChildContainer.Name = "pnlTopChildContainer";
-            this.pnlTopChildContainer.Size = new System.Drawing.Size(614, 69);
-            this.pnlTopChildContainer.TabIndex = 0;
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(624, 108);
+            this.panel1.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(203)))));
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(624, 108);
+            this.panel2.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 108);
+            this.panel3.TabIndex = 0;
+            // 
+            // pnlButtonContainer
+            // 
+            this.pnlButtonContainer.Controls.Add(this.pnlRight);
+            this.pnlButtonContainer.Controls.Add(this.pnlButtonLeft);
+            this.pnlButtonContainer.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlButtonContainer.Location = new System.Drawing.Point(0, 108);
+            this.pnlButtonContainer.Name = "pnlButtonContainer";
+            this.pnlButtonContainer.Size = new System.Drawing.Size(624, 53);
+            this.pnlButtonContainer.TabIndex = 0;
+            // 
+            // pnlRight
+            // 
+            this.pnlRight.Controls.Add(this.pnlButtonRight);
+            this.pnlRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlRight.Location = new System.Drawing.Point(200, 0);
+            this.pnlRight.Name = "pnlRight";
+            this.pnlRight.Size = new System.Drawing.Size(424, 53);
+            this.pnlRight.TabIndex = 1;
+            // 
+            // pnlButtonRight
+            // 
+            this.pnlButtonRight.Controls.Add(this.pnlClear);
+            this.pnlButtonRight.Controls.Add(this.btnAdd);
+            this.pnlButtonRight.Controls.Add(this.txtSearch);
+            this.pnlButtonRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlButtonRight.Location = new System.Drawing.Point(0, 0);
+            this.pnlButtonRight.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlButtonRight.Name = "pnlButtonRight";
+            this.pnlButtonRight.Size = new System.Drawing.Size(424, 53);
+            this.pnlButtonRight.TabIndex = 7;
+            this.pnlButtonRight.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlButtonRight_Paint);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(301, 14);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(79, 28);
+            this.btnAdd.TabIndex = 1;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(124, 19);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(129, 20);
+            this.txtSearch.TabIndex = 0;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // pnlButtonLeft
             // 
-            this.pnlButtonLeft.Controls.Add(this.btnPreview);
-            this.pnlButtonLeft.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlButtonLeft.Controls.Add(this.pnlButtonLeftContainer);
+            this.pnlButtonLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlButtonLeft.Location = new System.Drawing.Point(0, 0);
             this.pnlButtonLeft.Name = "pnlButtonLeft";
-            this.pnlButtonLeft.Size = new System.Drawing.Size(276, 69);
-            this.pnlButtonLeft.TabIndex = 3;
+            this.pnlButtonLeft.Size = new System.Drawing.Size(200, 53);
+            this.pnlButtonLeft.TabIndex = 0;
+            // 
+            // pnlButtonLeftContainer
+            // 
+            this.pnlButtonLeftContainer.Controls.Add(this.btnPreview);
+            this.pnlButtonLeftContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlButtonLeftContainer.Location = new System.Drawing.Point(0, 0);
+            this.pnlButtonLeftContainer.Name = "pnlButtonLeftContainer";
+            this.pnlButtonLeftContainer.Size = new System.Drawing.Size(200, 53);
+            this.pnlButtonLeftContainer.TabIndex = 8;
             // 
             // btnPreview
             // 
@@ -102,105 +202,78 @@
             this.btnPreview.Text = "Preview";
             this.btnPreview.UseVisualStyleBackColor = false;
             // 
-            // pnlButtonRight
+            // ovlMeasurement
             // 
-            this.pnlButtonRight.Controls.Add(this.pnlClear);
-            this.pnlButtonRight.Controls.Add(this.pnlSearch);
-            this.pnlButtonRight.Controls.Add(this.btnAdd);
-            this.pnlButtonRight.Controls.Add(this.textBox1);
-            this.pnlButtonRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlButtonRight.Location = new System.Drawing.Point(276, 0);
-            this.pnlButtonRight.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlButtonRight.Name = "pnlButtonRight";
-            this.pnlButtonRight.Size = new System.Drawing.Size(338, 69);
-            this.pnlButtonRight.TabIndex = 2;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(234, 17);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(79, 28);
-            this.btnAdd.TabIndex = 1;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(72, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(129, 20);
-            this.textBox1.TabIndex = 0;
+            this.ovlMeasurement.CellEditUseWholeCell = false;
+            this.ovlMeasurement.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ovlMeasurement.HasCollapsibleGroups = false;
+            this.ovlMeasurement.Location = new System.Drawing.Point(0, 0);
+            this.ovlMeasurement.MenuLabelGroupBy = "";
+            this.ovlMeasurement.MenuLabelLockGroupingOn = "";
+            this.ovlMeasurement.MenuLabelSortAscending = "";
+            this.ovlMeasurement.MenuLabelUnlockGroupingOn = "";
+            this.ovlMeasurement.Name = "ovlMeasurement";
+            this.ovlMeasurement.Size = new System.Drawing.Size(580, 191);
+            this.ovlMeasurement.TabIndex = 6;
+            this.ovlMeasurement.UseCompatibleStateImageBehavior = false;
+            this.ovlMeasurement.View = System.Windows.Forms.View.Details;
             // 
             // pnlClear
             // 
-            this.pnlClear.BackgroundImage = global::WaterSystem_v1.Properties.Resources.clear;
+            this.pnlClear.BackgroundImage = global::WaterSystem_v1.Properties.Resources.clear1;
             this.pnlClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlClear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlClear.Location = new System.Drawing.Point(202, 22);
+            this.pnlClear.Location = new System.Drawing.Point(254, 19);
             this.pnlClear.Name = "pnlClear";
             this.pnlClear.Size = new System.Drawing.Size(20, 20);
             this.pnlClear.TabIndex = 3;
-            // 
-            // pnlSearch
-            // 
-            this.pnlSearch.BackgroundImage = global::WaterSystem_v1.Properties.Resources.search;
-            this.pnlSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlSearch.Location = new System.Drawing.Point(51, 22);
-            this.pnlSearch.Name = "pnlSearch";
-            this.pnlSearch.Size = new System.Drawing.Size(20, 20);
-            this.pnlSearch.TabIndex = 2;
-            // 
-            // listView1
-            // 
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Location = new System.Drawing.Point(3, 141);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(614, 215);
-            this.listView1.TabIndex = 2;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.pnlClear.Click += new System.EventHandler(this.pnlClear_Click);
             // 
             // FrmMeasurementDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(620, 359);
-            this.Controls.Add(this.tblLayoutMeasurement);
+            this.ClientSize = new System.Drawing.Size(624, 364);
+            this.Controls.Add(this.pnlOuter);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Name = "FrmMeasurementDetails";
             this.Text = "FrmMeasurementDetails";
-            this.tblLayoutMeasurement.ResumeLayout(false);
+            this.pnlOuter.ResumeLayout(false);
+            this.pnlListContainer.ResumeLayout(false);
             this.pnlTopContainer.ResumeLayout(false);
-            this.pnlTopChildContainer.ResumeLayout(false);
-            this.pnlButtonLeft.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.pnlButtonContainer.ResumeLayout(false);
+            this.pnlRight.ResumeLayout(false);
             this.pnlButtonRight.ResumeLayout(false);
             this.pnlButtonRight.PerformLayout();
+            this.pnlButtonLeft.ResumeLayout(false);
+            this.pnlButtonLeftContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ovlMeasurement)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tblLayoutMeasurement;
-        private System.Windows.Forms.Panel pnlTopContainer;
-        private System.Windows.Forms.Panel pnlTopChildContainer;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnPreview;
-        private System.Windows.Forms.Panel pnlButtonRight;
-        private System.Windows.Forms.Panel pnlButtonLeft;
-        private System.Windows.Forms.Panel pnlSearch;
-        private System.Windows.Forms.Panel pnlClear;
-        private System.Windows.Forms.ListView listView1;
+        private Panel pnlOuter;
+        private BrightIdeasSoftware.ObjectListView ovlMeasurement;
+        private Panel pnlButtonLeftContainer;
+        private Button btnPreview;
+        private Panel pnlButtonRight;
+        private Panel pnlClear;
+        private Button btnAdd;
+        private TextBox txtSearch;
+        private Panel pnlTopContainer;
+        private Panel pnlButtonContainer;
+        private Panel pnlRight;
+        private Panel pnlButtonLeft;
+        private Panel pnlListContainer;
+        private Panel panel1;
+        private Panel panel2;
+        private Panel panel3;
     }
 }
