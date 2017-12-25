@@ -52,11 +52,11 @@
     <Compile Include="Demo.Designer.cs">
       <DependentUpon>Demo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAccount.cs">
+    <Compile Include="FrmAccountDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAccount.Designer.cs">
-      <DependentUpon>FrmAccount.cs</DependentUpon>
+    <Compile Include="FrmAccountDetails.Designer.cs">
+      <DependentUpon>FrmAccountDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmAddEditAccount.cs">
       <SubType>Form</SubType>
@@ -130,17 +130,17 @@
     <Compile Include="FrmMeasurementDetails.Designer.cs">
       <DependentUpon>FrmMeasurementDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSubAccount.cs">
+    <Compile Include="FrmSubAccountDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSubAccount.Designer.cs">
-      <DependentUpon>FrmSubAccount.cs</DependentUpon>
+    <Compile Include="FrmSubAccountDetails.Designer.cs">
+      <DependentUpon>FrmSubAccountDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSupplier.cs">
+    <Compile Include="FrmSupplierDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSupplier.Designer.cs">
-      <DependentUpon>FrmSupplier.cs</DependentUpon>
+    <Compile Include="FrmSupplierDetails.Designer.cs">
+      <DependentUpon>FrmSupplierDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmTransportation.cs">
       <SubType>Form</SubType>
@@ -179,8 +179,8 @@
     <EmbeddedResource Include="Demo.resx">
       <DependentUpon>Demo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAccount.resx">
-      <DependentUpon>FrmAccount.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAccountDetails.resx">
+      <DependentUpon>FrmAccountDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAddEditAccount.resx">
       <DependentUpon>FrmAddEditAccount.cs</DependentUpon>
@@ -227,11 +227,11 @@
     <EmbeddedResource Include="FrmMeasurementDetails.resx">
       <DependentUpon>FrmMeasurementDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSubAccount.resx">
-      <DependentUpon>FrmSubAccount.cs</DependentUpon>
+    <EmbeddedResource Include="FrmSubAccountDetails.resx">
+      <DependentUpon>FrmSubAccountDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSupplier.resx">
-      <DependentUpon>FrmSupplier.cs</DependentUpon>
+    <EmbeddedResource Include="FrmSupplierDetails.resx">
+      <DependentUpon>FrmSupplierDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTransportation.resx">
       <DependentUpon>FrmTransportation.cs</DependentUpon>

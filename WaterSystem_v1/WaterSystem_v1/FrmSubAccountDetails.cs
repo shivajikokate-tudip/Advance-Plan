@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WaterSystem_v1
 {
-    public partial class FrmSupplier : Form
+    public partial class FrmSubAccountDetails : Form
     {
-        public FrmSupplier()
+        public FrmSubAccountDetails()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace WaterSystem_v1
 {
-    partial class FrmSupplier
+    partial class FrmSupplierDetails
     {
         /// <summary>
         /// Required designer variable.

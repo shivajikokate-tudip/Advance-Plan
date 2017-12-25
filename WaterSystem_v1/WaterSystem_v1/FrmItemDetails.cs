@@ -16,5 +16,26 @@ namespace WaterSystem_v1
         {
             InitializeComponent();
         }
+
+        private void Configuration()
+        {
+            ovlItem.RowHeight = 25;
+            ovlItem.EmptyListMsg = "Please start with item.";
+            ovlItem.HeaderStyle = ColumnHeaderStyle.Nonclickable;
+
+        }
+
+        private void FillOlv()
+        {
+            try
+            {
+                ovlItem.Clear();
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
     }
 }

@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="ModelConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receiver\Master\CustomerReciever.cs" />
+    <Compile Include="Receiver\Master\ItemReciever.cs" />
     <Compile Include="Receiver\Master\MeasurementReciever.cs" />
   </ItemGroup>
   <ItemGroup />

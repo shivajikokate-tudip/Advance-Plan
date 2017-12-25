@@ -1,6 +1,6 @@
 ﻿namespace WaterSystem_v1
 {
-    partial class FrmSubAccount
+    partial class FrmSubAccountDetails
     {
         /// <summary>
         /// Required designer variable.

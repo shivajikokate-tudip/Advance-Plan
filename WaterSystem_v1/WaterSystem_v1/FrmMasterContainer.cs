@@ -8,6 +8,10 @@ namespace WaterSystem_v1
         FrmMeasurementDetails measurement = null;
         FrmItemDetails item = null;
         FrmCustomerDetails customer = null;
+        FrmSupplierDetails supplier = null;
+        FrmEmployeeDetails employee = null;
+        FrmAccountDetails account = null;
+        FrmSubAccountDetails subAccount = null;
         public FrmMasterContainer()
         {
             InitializeComponent();
@@ -45,12 +49,32 @@ namespace WaterSystem_v1
                     }
                     break;
                 case Tabs.Supplier:
+                    if (supplier == null)
+                    {
+                        supplier = new FrmSupplierDetails();
+                        Helpers.FormHelper.OpenForm(tabSupplier, supplier);
+                    }
                     break;
                 case Tabs.Employee:
+                    if (employee == null)
+                    {
+                        employee = new FrmEmployeeDetails();
+                        Helpers.FormHelper.OpenForm(tabEmployee, employee);
+                    }
                     break;
                 case Tabs.Account:
+                    if (account == null)
+                    {
+                        account = new FrmAccountDetails();
+                        Helpers.FormHelper.OpenForm(tabAccount, account);
+                    }
                     break;
                 case Tabs.SubAccount:
+                    if (subAccount == null)
+                    {
+                        subAccount = new FrmSubAccountDetails();
+                        Helpers.FormHelper.OpenForm(tabSubAccount, subAccount);
+                    }
                     break;
             }
         }

@@ -7,23 +7,14 @@ using System.Threading.Tasks;
 
 namespace WaterSystem_Repository
 {
-    public class MeasurementRepository
+    public class MeasurementRepository: BaseRepository
     {
         DatabaseCommunication dbCommunication = null;
+        public const string spName = "SP_MeasurementMaster";
 
-        public MeasurementRepository()
+        public MeasurementRepository(): base(new DatabaseCommunication(), spName)
         {
             dbCommunication = new DatabaseCommunication();
-        }
-
-        public DataSet Retrieve()
-        {
-            return dbCommunication.blFill("SP_MeasurementMaster");
-        }
-
-        public DataSet Save(Dictionary<string,string> parameters)
-        {
-            return dbCommunication.blFill_Para_Name(parameters, "SP_MeasurementMaster");
         }
     }
 }
