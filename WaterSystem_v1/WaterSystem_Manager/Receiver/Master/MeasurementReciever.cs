@@ -23,19 +23,19 @@ namespace WaterSystem_Manager.Reciever
         }
         public void Add(MeasurementModel model)
         {
-            model.Flag = DbConstants.Add;
+            model.Flag = Constants.DbConstants.Add;
             DatabaseOperation(model);
         }
 
         public void Update(MeasurementModel model)
         {
-            model.Flag = DbConstants.Update;
+            model.Flag = Constants.DbConstants.Update;
             DatabaseOperation(model);
         }
 
         public void Delete(MeasurementModel model)
         {
-            model.Flag = DbConstants.Delete;
+            model.Flag = Constants.DbConstants.Delete;
             DatabaseOperation(model);
         }
 
@@ -47,13 +47,6 @@ namespace WaterSystem_Manager.Reciever
             parameters.Add("@IsActive", model.IsActive.ToString());
             parameters.Add("@flag", model.Flag.ToString());
             _measurementRepo.Save(parameters);
-        }
-
-        private class DbConstants
-        {
-            public static string Update = "U";
-            public static string Add = "A";
-            public static string Delete = "D";
         }
     }
 }

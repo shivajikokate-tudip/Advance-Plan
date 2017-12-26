@@ -2,52 +2,52 @@
 using WaterSystem_Model;
 using WaterSystem_Repository;
 
+
 namespace WaterSystem_Manager.Receiver.Master
 {
-    public class CustomerReciever
+    public class SupplierReciever
     {
-            public CustomerRepository _customerRepo = null;
-        public CustomerReciever()
+        SupplierRepository _supplierRepo = null;
+        public SupplierReciever()
         {
-            this._customerRepo = new CustomerRepository();
+            _supplierRepo = new SupplierRepository();
         }
 
-        public IEnumerable<CustomerModel> GetList()
+        public IEnumerable<SupplierModel> GetList()
         {
-            return ModelConverter.CreateListFromTable<CustomerModel>(_customerRepo.Retrieve().Tables[0]);
+            return ModelConverter.CreateListFromTable<SupplierModel>(_supplierRepo.Retrieve().Tables[0]);
         }
 
-        public void Add(CustomerModel model)
+        public void Add(SupplierModel model)
         {
             model.Flag = Constants.DbConstants.Add;
             DatabaseOperation(model);
         }
 
-        public void Update(CustomerModel model)
+        public void Update(SupplierModel model)
         {
             model.Flag = Constants.DbConstants.Update;
             DatabaseOperation(model);
         }
 
-        public void Delete(CustomerModel model)
+        public void Delete(SupplierModel model)
         {
             model.Flag = Constants.DbConstants.Delete;
             DatabaseOperation(model);
         }
 
-        public void DatabaseOperation(CustomerModel model)
+        public void DatabaseOperation(SupplierModel model)
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("@Customer_Id", model.Customer_Id.ToString());
-            parameters.Add("@Customer_No", model.Customer_No.ToString());
+            parameters.Add("@Supplier_Id", model.Supplier_Id.ToString());
+            parameters.Add("@SupplierNo", model.SupplierNo.ToString());
             parameters.Add("@Comp_Name", model.Comp_Name.ToString());
             parameters.Add("@Address", model.Address.ToString());
-            parameters.Add("@Cust_Mobileno", model.Cust_Mobileno.ToString());
+            parameters.Add("@Supplier_Mobileno", model.Supplier_Mobileno.ToString());
             parameters.Add("@Vat_No", model.VatNo.ToString());
             parameters.Add("@Tin_No", model.TinNo.ToString());
-            parameters.Add("@IsActive", model.IsActive.ToString());
             parameters.Add("@flag", model.Flag.ToString());
-            _customerRepo.Save(parameters);
+            _supplierRepo.Save(parameters);
         }
     }
 }

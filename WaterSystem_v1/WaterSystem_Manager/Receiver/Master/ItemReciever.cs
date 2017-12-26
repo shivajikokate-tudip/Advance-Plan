@@ -23,19 +23,19 @@ namespace WaterSystem_Manager.Receiver.Master
 
         public void Add(ItemModel model)
         {
-            model.Flag = DbConstants.Add;
+            model.Flag = Constants.DbConstants.Add;
             DatabaseOperation(model);
         }
 
         public void Update(ItemModel model)
         {
-            model.Flag = DbConstants.Update;
+            model.Flag = Constants.DbConstants.Update;
             DatabaseOperation(model);
         }
 
         public void Delete(ItemModel model)
         {
-            model.Flag = DbConstants.Delete;
+            model.Flag = Constants.DbConstants.Delete;
             DatabaseOperation(model);
         }
 
@@ -49,13 +49,6 @@ namespace WaterSystem_Manager.Receiver.Master
             parameters.Add("@flag", model.Flag.ToString());
             parameters.Add("@PFlag", model.PFlag.ToString());
             _itemRepo.Save(parameters);
-        }
-
-        private class DbConstants
-        {
-            public static string Update = "U";
-            public static string Add = "A";
-            public static string Delete = "D";
         }
     }
 }

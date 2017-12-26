@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WaterSystem_Model
 {
-    public class MeasurementModel
+    public class MeasurementModel: IModel
     {
         public decimal MeasurmentId { get; set; }
         public string MeasurmentName { get; set; }

@@ -8,10 +8,6 @@ namespace WaterSystem_Model
 {
     public interface IModel
     {
-        string Update();
-
-        string Delete();
-
-        string Flag();
+       
     }
 }

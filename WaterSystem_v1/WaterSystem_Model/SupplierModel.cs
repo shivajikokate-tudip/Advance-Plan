@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WaterSystem_Model
 {
-    public class SupplierModel
+    public class SupplierModel: IModel
     {
         public int Supplier_Id { get; set; }
         public int SupplierNo { get; set; }
@@ -16,5 +16,8 @@ namespace WaterSystem_Model
         public string VatNo { get; set; }
         public string TinNo { get; set; }
         public bool IsActive { get; set; }
+        public string Update { get { return "Update"; } }
+        public string Delete { get { return "Delete"; } }
+        public string Flag { get; set; }
     }
 }

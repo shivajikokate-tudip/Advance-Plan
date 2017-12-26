@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WaterSystem_Model
 {
-    public class ItemModel
+    public class ItemModel: IModel
     {
         public int ItemId { get; set; }
         public string ItemName { get; set; }

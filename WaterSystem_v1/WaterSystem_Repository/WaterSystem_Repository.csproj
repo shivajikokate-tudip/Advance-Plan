@@ -61,6 +61,10 @@
       <Project>{76c0a8c0-f074-4ae4-9df8-75cc09dbfc4f}</Project>
       <Name>WaterSystem_Connection</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WaterSystem_Model\WaterSystem_Models.csproj">
+      <Project>{934ECE57-8110-4362-BC6C-9FAB1FB5C221}</Project>
+      <Name>WaterSystem_Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WaterSystem_Model
 {
-    public class EmployeeModel
+    public class EmployeeModel: IModel
     {
         public int Emp_Id { get; set; }
         public string Emp_Name { get; set; }
@@ -16,5 +16,8 @@ namespace WaterSystem_Model
         public DateTime Emp_JoinDate { get; set; }
         public int Emp_Sal { get; set; }
         public bool IsCheck { get; set; }
+        public string Update { get { return "Update"; } }
+        public string Delete { get { return "Delete"; } }
+        public string Flag { get; set; }
     }
 }
