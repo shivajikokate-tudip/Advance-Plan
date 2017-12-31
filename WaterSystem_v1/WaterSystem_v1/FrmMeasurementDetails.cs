@@ -53,7 +53,7 @@ namespace WaterSystem_v1
             {
                 bool active = false;
                 if (((MeasurementModel)row).IsActive)
-                {
+                { 
                     active = true;
                 }
                 return active;

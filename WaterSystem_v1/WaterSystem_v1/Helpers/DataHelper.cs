@@ -10,6 +10,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WaterSystem_Model;
 
 namespace WaterSystem_v1.Helpers
 {
@@ -661,6 +662,16 @@ namespace WaterSystem_v1.Helpers
         public string GetMemberName<T, TValue>(Expression<Func<T, TValue>> memberAccess)
         {
             return ((MemberExpression)memberAccess.Body).Member.Name;
+        }
+
+        public void FillCombo(ComboBox cmb, IEnumerable<DropDown> dataList)
+        {
+            cmb.DisplayMember = GetMemberName((DropDown c) => c.Name);
+            cmb.ValueMember = GetMemberName((DropDown c) => c.Value);
+            foreach (var data in dataList)
+            {
+                cmb.Items.Add(new DropDown() { Name = data.Name, Value = data.Value });
+            }
         }
 
         #region Datatable to Object

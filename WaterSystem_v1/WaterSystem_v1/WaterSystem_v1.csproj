@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,12 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Demo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Demo.Designer.cs">
-      <DependentUpon>Demo.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmAccountDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +61,12 @@
     </Compile>
     <Compile Include="FrmAddEditAccount.Designer.cs">
       <DependentUpon>FrmAddEditAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddEditBoxwiseBottleQuantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddEditBoxwiseBottleQuantity.Designer.cs">
+      <DependentUpon>FrmAddEditBoxwiseBottleQuantity.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmAddEditCustomer.cs">
       <SubType>Form</SubType>
@@ -88,6 +92,18 @@
     <Compile Include="FrmAddEditMeasurement.Designer.cs">
       <DependentUpon>FrmAddEditMeasurement.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAddEditRoot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddEditRoot.Designer.cs">
+      <DependentUpon>FrmAddEditRoot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddEditRowMateral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddEditRowMateral.Designer.cs">
+      <DependentUpon>FrmAddEditRowMateral.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAddEditSubAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +121,24 @@
     </Compile>
     <Compile Include="FrmAddEditTransportation.Designer.cs">
       <DependentUpon>FrmAddEditTransportation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddEditUser.Designer.cs">
+      <DependentUpon>FrmAddEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddEditVechile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddEditVechile.Designer.cs">
+      <DependentUpon>FrmAddEditVechile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBoxwiseBottleQuantityDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBoxwiseBottleQuantityDetail.Designer.cs">
+      <DependentUpon>FrmBoxwiseBottleQuantityDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCustomerDetails.cs">
       <SubType>Form</SubType>
@@ -130,6 +164,24 @@
     <Compile Include="FrmMeasurementDetails.Designer.cs">
       <DependentUpon>FrmMeasurementDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmProductionManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProductionManage.Designer.cs">
+      <DependentUpon>FrmProductionManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRootDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRootDetail.Designer.cs">
+      <DependentUpon>FrmRootDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRowMaterialDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRowMaterialDetail.Designer.cs">
+      <DependentUpon>FrmRowMaterialDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSubAccountDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +199,24 @@
     </Compile>
     <Compile Include="FrmTransportation.Designer.cs">
       <DependentUpon>FrmTransportation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTransportationDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTransportationDetail.Designer.cs">
+      <DependentUpon>FrmTransportationDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUserDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUserDetail.Designer.cs">
+      <DependentUpon>FrmUserDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVechileDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVechileDetail.Designer.cs">
+      <DependentUpon>FrmVechileDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\DataHelper.cs" />
     <Compile Include="Helpers\FormHelper.cs" />
@@ -176,14 +246,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Demo.resx">
-      <DependentUpon>Demo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmAccountDetails.resx">
       <DependentUpon>FrmAccountDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAddEditAccount.resx">
       <DependentUpon>FrmAddEditAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddEditBoxwiseBottleQuantity.resx">
+      <DependentUpon>FrmAddEditBoxwiseBottleQuantity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAddEditCustomer.resx">
       <DependentUpon>FrmAddEditCustomer.cs</DependentUpon>
@@ -197,6 +267,12 @@
     <EmbeddedResource Include="FrmAddEditMeasurement.resx">
       <DependentUpon>FrmAddEditMeasurement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddEditRoot.resx">
+      <DependentUpon>FrmAddEditRoot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddEditRowMateral.resx">
+      <DependentUpon>FrmAddEditRowMateral.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAddEditSubAccount.resx">
       <DependentUpon>FrmAddEditSubAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +281,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAddEditTransportation.resx">
       <DependentUpon>FrmAddEditTransportation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddEditUser.resx">
+      <DependentUpon>FrmAddEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddEditVechile.resx">
+      <DependentUpon>FrmAddEditVechile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBoxwiseBottleQuantityDetail.resx">
+      <DependentUpon>FrmBoxwiseBottleQuantityDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCustomerDetails.resx">
       <DependentUpon>FrmCustomerDetails.cs</DependentUpon>
@@ -227,6 +312,15 @@
     <EmbeddedResource Include="FrmMeasurementDetails.resx">
       <DependentUpon>FrmMeasurementDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductionManage.resx">
+      <DependentUpon>FrmProductionManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRootDetail.resx">
+      <DependentUpon>FrmRootDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRowMaterialDetail.resx">
+      <DependentUpon>FrmRowMaterialDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSubAccountDetails.resx">
       <DependentUpon>FrmSubAccountDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,6 +329,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTransportation.resx">
       <DependentUpon>FrmTransportation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTransportationDetail.resx">
+      <DependentUpon>FrmTransportationDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUserDetail.resx">
+      <DependentUpon>FrmUserDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVechileDetail.resx">
+      <DependentUpon>FrmVechileDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\ImageResource.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -248,6 +351,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

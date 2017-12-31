@@ -77,7 +77,7 @@
             this.pnlButton.Controls.Add(this.btnCancel);
             this.pnlButton.Controls.Add(this.btnSubmit);
             this.pnlButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlButton.Location = new System.Drawing.Point(0, 218);
+            this.pnlButton.Location = new System.Drawing.Point(0, 212);
             this.pnlButton.Name = "pnlButton";
             this.pnlButton.Size = new System.Drawing.Size(539, 46);
             this.pnlButton.TabIndex = 4;
@@ -150,7 +150,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(24, 72);
+            this.lblName.Location = new System.Drawing.Point(24, 60);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(141, 16);
             this.lblName.TabIndex = 5;
@@ -158,14 +158,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(27, 92);
+            this.textBox1.Location = new System.Drawing.Point(27, 80);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(215, 20);
             this.textBox1.TabIndex = 6;
             // 
             // txtMobile
             // 
-            this.txtMobile.Location = new System.Drawing.Point(295, 92);
+            this.txtMobile.Location = new System.Drawing.Point(295, 80);
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(215, 20);
             this.txtMobile.TabIndex = 8;
@@ -174,7 +174,7 @@
             // 
             this.lblMobile.AutoSize = true;
             this.lblMobile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMobile.Location = new System.Drawing.Point(292, 72);
+            this.lblMobile.Location = new System.Drawing.Point(292, 60);
             this.lblMobile.Name = "lblMobile";
             this.lblMobile.Size = new System.Drawing.Size(55, 16);
             this.lblMobile.TabIndex = 7;
@@ -182,7 +182,7 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(29, 147);
+            this.txtAddress.Location = new System.Drawing.Point(29, 135);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(481, 51);
@@ -192,7 +192,7 @@
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(26, 127);
+            this.lblAddress.Location = new System.Drawing.Point(26, 115);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(59, 16);
             this.lblAddress.TabIndex = 9;
@@ -203,7 +203,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(539, 264);
+            this.ClientSize = new System.Drawing.Size(539, 258);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.txtMobile);

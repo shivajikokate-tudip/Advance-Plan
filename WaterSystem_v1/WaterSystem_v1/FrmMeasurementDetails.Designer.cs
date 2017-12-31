@@ -32,6 +32,7 @@ namespace WaterSystem_v1
         {
             this.pnlOuter = new System.Windows.Forms.Panel();
             this.pnlListContainer = new System.Windows.Forms.Panel();
+            this.ovlMeasurement = new BrightIdeasSoftware.ObjectListView();
             this.pnlTopContainer = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -39,15 +40,15 @@ namespace WaterSystem_v1
             this.pnlButtonContainer = new System.Windows.Forms.Panel();
             this.pnlRight = new System.Windows.Forms.Panel();
             this.pnlButtonRight = new System.Windows.Forms.Panel();
+            this.pnlClear = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.pnlButtonLeft = new System.Windows.Forms.Panel();
             this.pnlButtonLeftContainer = new System.Windows.Forms.Panel();
             this.btnPreview = new System.Windows.Forms.Button();
-            this.ovlMeasurement = new BrightIdeasSoftware.ObjectListView();
-            this.pnlClear = new System.Windows.Forms.Panel();
             this.pnlOuter.SuspendLayout();
             this.pnlListContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ovlMeasurement)).BeginInit();
             this.pnlTopContainer.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -56,7 +57,6 @@ namespace WaterSystem_v1
             this.pnlButtonRight.SuspendLayout();
             this.pnlButtonLeft.SuspendLayout();
             this.pnlButtonLeftContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ovlMeasurement)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlOuter
@@ -77,6 +77,23 @@ namespace WaterSystem_v1
             this.pnlListContainer.Name = "pnlListContainer";
             this.pnlListContainer.Size = new System.Drawing.Size(624, 203);
             this.pnlListContainer.TabIndex = 10;
+            // 
+            // ovlMeasurement
+            // 
+            this.ovlMeasurement.CellEditUseWholeCell = false;
+            this.ovlMeasurement.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ovlMeasurement.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ovlMeasurement.HasCollapsibleGroups = false;
+            this.ovlMeasurement.Location = new System.Drawing.Point(0, 0);
+            this.ovlMeasurement.MenuLabelGroupBy = "";
+            this.ovlMeasurement.MenuLabelLockGroupingOn = "";
+            this.ovlMeasurement.MenuLabelSortAscending = "";
+            this.ovlMeasurement.MenuLabelUnlockGroupingOn = "";
+            this.ovlMeasurement.Name = "ovlMeasurement";
+            this.ovlMeasurement.Size = new System.Drawing.Size(624, 203);
+            this.ovlMeasurement.TabIndex = 6;
+            this.ovlMeasurement.UseCompatibleStateImageBehavior = false;
+            this.ovlMeasurement.View = System.Windows.Forms.View.Details;
             // 
             // pnlTopContainer
             // 
@@ -148,6 +165,18 @@ namespace WaterSystem_v1
             this.pnlButtonRight.TabIndex = 7;
             this.pnlButtonRight.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlButtonRight_Paint);
             // 
+            // pnlClear
+            // 
+            this.pnlClear.BackgroundImage = global::WaterSystem_v1.Properties.Resources.clear1;
+            this.pnlClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlClear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlClear.Location = new System.Drawing.Point(254, 19);
+            this.pnlClear.Name = "pnlClear";
+            this.pnlClear.Size = new System.Drawing.Size(20, 20);
+            this.pnlClear.TabIndex = 3;
+            this.pnlClear.Click += new System.EventHandler(this.pnlClear_Click);
+            // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
@@ -202,34 +231,6 @@ namespace WaterSystem_v1
             this.btnPreview.Text = "Preview";
             this.btnPreview.UseVisualStyleBackColor = false;
             // 
-            // ovlMeasurement
-            // 
-            this.ovlMeasurement.CellEditUseWholeCell = false;
-            this.ovlMeasurement.Cursor = System.Windows.Forms.Cursors.Default;
-            this.ovlMeasurement.HasCollapsibleGroups = false;
-            this.ovlMeasurement.Location = new System.Drawing.Point(0, 0);
-            this.ovlMeasurement.MenuLabelGroupBy = "";
-            this.ovlMeasurement.MenuLabelLockGroupingOn = "";
-            this.ovlMeasurement.MenuLabelSortAscending = "";
-            this.ovlMeasurement.MenuLabelUnlockGroupingOn = "";
-            this.ovlMeasurement.Name = "ovlMeasurement";
-            this.ovlMeasurement.Size = new System.Drawing.Size(580, 191);
-            this.ovlMeasurement.TabIndex = 6;
-            this.ovlMeasurement.UseCompatibleStateImageBehavior = false;
-            this.ovlMeasurement.View = System.Windows.Forms.View.Details;
-            // 
-            // pnlClear
-            // 
-            this.pnlClear.BackgroundImage = global::WaterSystem_v1.Properties.Resources.clear1;
-            this.pnlClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlClear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlClear.Location = new System.Drawing.Point(254, 19);
-            this.pnlClear.Name = "pnlClear";
-            this.pnlClear.Size = new System.Drawing.Size(20, 20);
-            this.pnlClear.TabIndex = 3;
-            this.pnlClear.Click += new System.EventHandler(this.pnlClear_Click);
-            // 
             // FrmMeasurementDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,6 +244,7 @@ namespace WaterSystem_v1
             this.Text = "FrmMeasurementDetails";
             this.pnlOuter.ResumeLayout(false);
             this.pnlListContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ovlMeasurement)).EndInit();
             this.pnlTopContainer.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -252,7 +254,6 @@ namespace WaterSystem_v1
             this.pnlButtonRight.PerformLayout();
             this.pnlButtonLeft.ResumeLayout(false);
             this.pnlButtonLeftContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ovlMeasurement)).EndInit();
             this.ResumeLayout(false);
 
         }

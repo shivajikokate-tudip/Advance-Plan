@@ -21,6 +21,11 @@ namespace WaterSystem_Manager.Receiver.Master
            return ModelConverter.CreateListFromTable<ItemModel>(_itemRepo.Retrieve().Tables[0]);
         }
 
+        public IEnumerable<MeasurementModel> GetMeasurement()
+        {
+            return ModelConverter.CreateListFromTable<MeasurementModel>(_itemRepo.Retrieve().Tables[1]);
+        }
+
         public void Add(ItemModel model)
         {
             model.Flag = Constants.DbConstants.Add;
@@ -41,14 +46,21 @@ namespace WaterSystem_Manager.Receiver.Master
 
         public void DatabaseOperation(ItemModel model)
         {
-            Dictionary<string, string> parameters = new Dictionary<string, string>();
-            parameters.Add("@ItemId", model.ItemId.ToString());
-            parameters.Add("@ItemName", model.ItemName);
-            parameters.Add("@MeasurmentId", model.MeasurementId.ToString());
-            parameters.Add("@IsActive", model.IsActive.ToString());
-            parameters.Add("@flag", model.Flag.ToString());
-            parameters.Add("@PFlag", model.PFlag.ToString());
-            _itemRepo.Save(parameters);
+            if (model != null)
+            {
+                Dictionary<string, string> parameters = new Dictionary<string, string>();
+                parameters.Add("@ItemId", model.ItemId.ToString());
+                parameters.Add("@ItemName", model.ItemName);
+                parameters.Add("@MeasurmentId", model.MeasurmentId.ToString());
+                parameters.Add("@IsActive", model.IsActive.ToString());
+                parameters.Add("@flag", model.Flag.ToString());
+                parameters.Add("@PFlag", model.PFlag.ToString());
+                _itemRepo.Save(parameters);
+            }
+            else
+            {
+                throw new NullReferenceException();
+            }
         }
     }
 }

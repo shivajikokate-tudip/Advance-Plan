@@ -16,5 +16,10 @@ namespace WaterSystem_v1
         {
             InitializeComponent();
         }
+
+        private void pnlTopContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

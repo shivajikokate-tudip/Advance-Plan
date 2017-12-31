@@ -161,6 +161,7 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtSearch
             // 
@@ -179,6 +180,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmItemDetails";
             this.Text = "FrmItemDetails";
+            this.Load += new System.EventHandler(this.FrmItemDetails_Load);
             this.pnlContainer.ResumeLayout(false);
             this.pnlListContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ovlItem)).EndInit();

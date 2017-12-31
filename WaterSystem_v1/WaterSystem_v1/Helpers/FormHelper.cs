@@ -12,13 +12,20 @@ namespace WaterSystem_v1.Helpers
     {
         public static void OpenForm(Control container, Form form)
         {
-            if (!(Application.OpenForms.OfType<Form>().Count() == 1))
+            try
             {
-                form.TopLevel = false;
-                container.Controls.Clear();
-                container.Controls.Add(form);
-                form.Dock = DockStyle.Fill;
-                form.Show();
+                if(!(Application.OpenForms.OfType<Form>().Count() == 1))
+            {
+                    form.TopLevel = false;
+                    container.Controls.Clear();
+                    container.Controls.Add(form);
+                    form.Dock = DockStyle.Fill;
+                    form.Show();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
 

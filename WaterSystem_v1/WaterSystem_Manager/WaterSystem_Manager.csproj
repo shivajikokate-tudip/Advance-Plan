@@ -51,6 +51,7 @@
     <Compile Include="Receiver\Master\MeasurementReciever.cs" />
     <Compile Include="Receiver\Master\SubExpencesReciever.cs" />
     <Compile Include="Receiver\Master\SupplierReciever.cs" />
+    <Compile Include="Receiver\Master\TransportationReciever.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

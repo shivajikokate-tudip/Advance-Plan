@@ -24,5 +24,10 @@ namespace WaterSystem_v1
             toggleActive.OffFont = new Font(this.Font.FontFamily, 10, FontStyle.Bold);
             toggleActive.OffForeColor = Color.FromArgb(92, 92, 92);
         }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -38,9 +38,9 @@
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblMeasurement = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbMeasurement = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtItemName = new System.Windows.Forms.TextBox();
             this.toggleProcess = new JCS.ToggleSwitch();
             this.lblWithProcess = new System.Windows.Forms.Label();
             this.lblWithoutProcess = new System.Windows.Forms.Label();
@@ -57,9 +57,9 @@
             this.pnlButton.Controls.Add(this.btnCancel);
             this.pnlButton.Controls.Add(this.btnSubmit);
             this.pnlButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlButton.Location = new System.Drawing.Point(0, 223);
+            this.pnlButton.Location = new System.Drawing.Point(0, 194);
             this.pnlButton.Name = "pnlButton";
-            this.pnlButton.Size = new System.Drawing.Size(517, 46);
+            this.pnlButton.Size = new System.Drawing.Size(503, 46);
             this.pnlButton.TabIndex = 1;
             // 
             // pnlActiveContainer
@@ -106,12 +106,13 @@
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancel.Location = new System.Drawing.Point(325, 12);
+            this.btnCancel.Location = new System.Drawing.Point(301, 12);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(80, 25);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSubmit
             // 
@@ -119,12 +120,13 @@
             this.btnSubmit.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSubmit.Location = new System.Drawing.Point(420, 12);
+            this.btnSubmit.Location = new System.Drawing.Point(396, 12);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(80, 25);
             this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // pnlTitle
             // 
@@ -133,7 +135,7 @@
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitle.Location = new System.Drawing.Point(0, 0);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(517, 35);
+            this.pnlTitle.Size = new System.Drawing.Size(503, 35);
             this.pnlTitle.TabIndex = 3;
             // 
             // lblTitle
@@ -150,40 +152,40 @@
             // lblMeasurement
             // 
             this.lblMeasurement.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMeasurement.Location = new System.Drawing.Point(57, 92);
+            this.lblMeasurement.Location = new System.Drawing.Point(85, 78);
             this.lblMeasurement.Name = "lblMeasurement";
             this.lblMeasurement.Size = new System.Drawing.Size(99, 18);
             this.lblMeasurement.TabIndex = 4;
             this.lblMeasurement.Text = "Measurement :";
             // 
-            // comboBox1
+            // cmbMeasurement
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(60, 115);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(155, 21);
-            this.comboBox1.TabIndex = 5;
+            this.cmbMeasurement.FormattingEnabled = true;
+            this.cmbMeasurement.Location = new System.Drawing.Point(88, 99);
+            this.cmbMeasurement.Name = "cmbMeasurement";
+            this.cmbMeasurement.Size = new System.Drawing.Size(155, 21);
+            this.cmbMeasurement.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(57, 152);
+            this.label1.Location = new System.Drawing.Point(85, 133);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 16);
             this.label1.TabIndex = 6;
             this.label1.Text = "Item Name :";
             // 
-            // textBox1
+            // txtItemName
             // 
-            this.textBox1.Location = new System.Drawing.Point(60, 177);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(218, 20);
-            this.textBox1.TabIndex = 7;
+            this.txtItemName.Location = new System.Drawing.Point(88, 153);
+            this.txtItemName.Name = "txtItemName";
+            this.txtItemName.Size = new System.Drawing.Size(218, 20);
+            this.txtItemName.TabIndex = 7;
             // 
             // toggleProcess
             // 
-            this.toggleProcess.Location = new System.Drawing.Point(238, 52);
+            this.toggleProcess.Location = new System.Drawing.Point(238, 47);
             this.toggleProcess.Name = "toggleProcess";
             this.toggleProcess.OffFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toggleProcess.OnFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -194,7 +196,7 @@
             // lblWithProcess
             // 
             this.lblWithProcess.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWithProcess.Location = new System.Drawing.Point(140, 50);
+            this.lblWithProcess.Location = new System.Drawing.Point(140, 45);
             this.lblWithProcess.Name = "lblWithProcess";
             this.lblWithProcess.Size = new System.Drawing.Size(92, 25);
             this.lblWithProcess.TabIndex = 9;
@@ -204,7 +206,7 @@
             // lblWithoutProcess
             // 
             this.lblWithoutProcess.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWithoutProcess.Location = new System.Drawing.Point(308, 53);
+            this.lblWithoutProcess.Location = new System.Drawing.Point(308, 48);
             this.lblWithoutProcess.Name = "lblWithoutProcess";
             this.lblWithoutProcess.Size = new System.Drawing.Size(111, 23);
             this.lblWithoutProcess.TabIndex = 10;
@@ -216,13 +218,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(517, 269);
+            this.ClientSize = new System.Drawing.Size(503, 240);
             this.Controls.Add(this.lblWithoutProcess);
             this.Controls.Add(this.lblWithProcess);
             this.Controls.Add(this.toggleProcess);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtItemName);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbMeasurement);
             this.Controls.Add(this.lblMeasurement);
             this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.pnlButton);
@@ -253,9 +255,9 @@
         private System.Windows.Forms.Panel pnlTitle;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblMeasurement;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbMeasurement;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtItemName;
         private JCS.ToggleSwitch toggleProcess;
         private System.Windows.Forms.Label lblWithProcess;
         private System.Windows.Forms.Label lblWithoutProcess;

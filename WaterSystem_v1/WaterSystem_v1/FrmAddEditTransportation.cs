@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace WaterSystem_v1
 {
-    public partial class FrmAddEditTransportation : Form
+    public partial class FrmAddEditTransportation: Form
     {
         public FrmAddEditTransportation()
         {

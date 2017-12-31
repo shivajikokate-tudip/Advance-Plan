@@ -10,10 +10,11 @@ namespace WaterSystem_Repository
     public class BaseRepository
     {
         DatabaseCommunication _communication = null;
-        public const string _spName = null;
+        public readonly string _spName = null;
         public BaseRepository(DatabaseCommunication communication, string spName)
         {
             _communication = communication;
+            _spName = spName;
         }
 
         public DataSet Retrieve()

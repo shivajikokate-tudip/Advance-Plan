@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.pnlContainer = new System.Windows.Forms.Panel();
+            this.pnlListContainer = new System.Windows.Forms.Panel();
+            this.ovlMeasurement = new BrightIdeasSoftware.ObjectListView();
             this.pnlTopContainer = new System.Windows.Forms.Panel();
             this.pnlButtonContainer = new System.Windows.Forms.Panel();
             this.pnlButtonLeftContainer = new System.Windows.Forms.Panel();
             this.btnPreview = new System.Windows.Forms.Button();
             this.pnlButtonRight = new System.Windows.Forms.Panel();
+            this.pnlClear = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.pnlClear = new System.Windows.Forms.Panel();
-            this.pnlListContainer = new System.Windows.Forms.Panel();
-            this.ovlMeasurement = new BrightIdeasSoftware.ObjectListView();
             this.pnlContainer.SuspendLayout();
+            this.pnlListContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ovlMeasurement)).BeginInit();
             this.pnlTopContainer.SuspendLayout();
             this.pnlButtonContainer.SuspendLayout();
             this.pnlButtonLeftContainer.SuspendLayout();
             this.pnlButtonRight.SuspendLayout();
-            this.pnlListContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ovlMeasurement)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlContainer
@@ -58,6 +58,32 @@
             this.pnlContainer.Size = new System.Drawing.Size(665, 384);
             this.pnlContainer.TabIndex = 0;
             // 
+            // pnlListContainer
+            // 
+            this.pnlListContainer.Controls.Add(this.ovlMeasurement);
+            this.pnlListContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlListContainer.Location = new System.Drawing.Point(0, 192);
+            this.pnlListContainer.Name = "pnlListContainer";
+            this.pnlListContainer.Size = new System.Drawing.Size(665, 192);
+            this.pnlListContainer.TabIndex = 11;
+            // 
+            // ovlMeasurement
+            // 
+            this.ovlMeasurement.CellEditUseWholeCell = false;
+            this.ovlMeasurement.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ovlMeasurement.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ovlMeasurement.HasCollapsibleGroups = false;
+            this.ovlMeasurement.Location = new System.Drawing.Point(0, 0);
+            this.ovlMeasurement.MenuLabelGroupBy = "";
+            this.ovlMeasurement.MenuLabelLockGroupingOn = "";
+            this.ovlMeasurement.MenuLabelSortAscending = "";
+            this.ovlMeasurement.MenuLabelUnlockGroupingOn = "";
+            this.ovlMeasurement.Name = "ovlMeasurement";
+            this.ovlMeasurement.Size = new System.Drawing.Size(665, 192);
+            this.ovlMeasurement.TabIndex = 6;
+            this.ovlMeasurement.UseCompatibleStateImageBehavior = false;
+            this.ovlMeasurement.View = System.Windows.Forms.View.Details;
+            // 
             // pnlTopContainer
             // 
             this.pnlTopContainer.Controls.Add(this.pnlButtonContainer);
@@ -66,6 +92,7 @@
             this.pnlTopContainer.Name = "pnlTopContainer";
             this.pnlTopContainer.Size = new System.Drawing.Size(665, 192);
             this.pnlTopContainer.TabIndex = 0;
+            this.pnlTopContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTopContainer_Paint);
             // 
             // pnlButtonContainer
             // 
@@ -111,6 +138,17 @@
             this.pnlButtonRight.Size = new System.Drawing.Size(424, 50);
             this.pnlButtonRight.TabIndex = 9;
             // 
+            // pnlClear
+            // 
+            this.pnlClear.BackgroundImage = global::WaterSystem_v1.Properties.Resources.clear1;
+            this.pnlClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlClear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlClear.Location = new System.Drawing.Point(254, 19);
+            this.pnlClear.Name = "pnlClear";
+            this.pnlClear.Size = new System.Drawing.Size(20, 20);
+            this.pnlClear.TabIndex = 3;
+            // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
@@ -132,44 +170,7 @@
             this.txtSearch.Size = new System.Drawing.Size(129, 20);
             this.txtSearch.TabIndex = 0;
             // 
-            // pnlClear
-            // 
-            this.pnlClear.BackgroundImage = global::WaterSystem_v1.Properties.Resources.clear1;
-            this.pnlClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlClear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlClear.Location = new System.Drawing.Point(254, 19);
-            this.pnlClear.Name = "pnlClear";
-            this.pnlClear.Size = new System.Drawing.Size(20, 20);
-            this.pnlClear.TabIndex = 3;
-            // 
-            // pnlListContainer
-            // 
-            this.pnlListContainer.Controls.Add(this.ovlMeasurement);
-            this.pnlListContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlListContainer.Location = new System.Drawing.Point(0, 192);
-            this.pnlListContainer.Name = "pnlListContainer";
-            this.pnlListContainer.Size = new System.Drawing.Size(665, 192);
-            this.pnlListContainer.TabIndex = 11;
-            // 
-            // ovlMeasurement
-            // 
-            this.ovlMeasurement.CellEditUseWholeCell = false;
-            this.ovlMeasurement.Cursor = System.Windows.Forms.Cursors.Default;
-            this.ovlMeasurement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ovlMeasurement.HasCollapsibleGroups = false;
-            this.ovlMeasurement.Location = new System.Drawing.Point(0, 0);
-            this.ovlMeasurement.MenuLabelGroupBy = "";
-            this.ovlMeasurement.MenuLabelLockGroupingOn = "";
-            this.ovlMeasurement.MenuLabelSortAscending = "";
-            this.ovlMeasurement.MenuLabelUnlockGroupingOn = "";
-            this.ovlMeasurement.Name = "ovlMeasurement";
-            this.ovlMeasurement.Size = new System.Drawing.Size(665, 192);
-            this.ovlMeasurement.TabIndex = 6;
-            this.ovlMeasurement.UseCompatibleStateImageBehavior = false;
-            this.ovlMeasurement.View = System.Windows.Forms.View.Details;
-            // 
-            // FrmAccount
+            // FrmAccountDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -177,16 +178,16 @@
             this.ClientSize = new System.Drawing.Size(665, 384);
             this.Controls.Add(this.pnlContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmAccount";
+            this.Name = "FrmAccountDetails";
             this.Text = "FrmAccount";
             this.pnlContainer.ResumeLayout(false);
+            this.pnlListContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ovlMeasurement)).EndInit();
             this.pnlTopContainer.ResumeLayout(false);
             this.pnlButtonContainer.ResumeLayout(false);
             this.pnlButtonLeftContainer.ResumeLayout(false);
             this.pnlButtonRight.ResumeLayout(false);
             this.pnlButtonRight.PerformLayout();
-            this.pnlListContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ovlMeasurement)).EndInit();
             this.ResumeLayout(false);
 
         }
