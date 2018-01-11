@@ -48,7 +48,7 @@ namespace WaterSystem_Manager.Receiver.Master
             parameters.Add("@Employee_Address", model.Employee_Address.ToString());
             parameters.Add("@Contact", model.Contact.ToString());
             parameters.Add("@Transportation_ID", model.Transportation_ID.ToString());
-            parameters.Add("@Description", model.Description;
+            parameters.Add("@Description", model.Description);
             parameters.Add("@IsActive", model.Is_Active.ToString());
             parameters.Add("@flag", model.Flag.ToString());
             _vehicleRepo.Save(parameters);
