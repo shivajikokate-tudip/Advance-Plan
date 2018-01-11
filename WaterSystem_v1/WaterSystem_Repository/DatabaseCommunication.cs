@@ -118,7 +118,7 @@ namespace WaterSystem_Repository
             }
             catch (Exception err)
             {
-                err.GetBaseException();
+                throw err;
             }
             return (ds);
         }

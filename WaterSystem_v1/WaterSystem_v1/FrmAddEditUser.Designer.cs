@@ -152,7 +152,7 @@
             // 
             this.lblGroupType.AutoSize = true;
             this.lblGroupType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGroupType.Location = new System.Drawing.Point(287, 63);
+            this.lblGroupType.Location = new System.Drawing.Point(269, 62);
             this.lblGroupType.Name = "lblGroupType";
             this.lblGroupType.Size = new System.Drawing.Size(83, 16);
             this.lblGroupType.TabIndex = 4;
@@ -161,16 +161,16 @@
             // cmbGroupType
             // 
             this.cmbGroupType.FormattingEnabled = true;
-            this.cmbGroupType.Location = new System.Drawing.Point(290, 81);
+            this.cmbGroupType.Location = new System.Drawing.Point(272, 80);
             this.cmbGroupType.Name = "cmbGroupType";
-            this.cmbGroupType.Size = new System.Drawing.Size(157, 21);
+            this.cmbGroupType.Size = new System.Drawing.Size(184, 21);
             this.cmbGroupType.TabIndex = 5;
             // 
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.Location = new System.Drawing.Point(42, 63);
+            this.lblUserName.Location = new System.Drawing.Point(21, 62);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(80, 16);
             this.lblUserName.TabIndex = 6;
@@ -178,16 +178,16 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(45, 82);
+            this.txtUserName.Location = new System.Drawing.Point(24, 81);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(164, 20);
+            this.txtUserName.Size = new System.Drawing.Size(184, 20);
             this.txtUserName.TabIndex = 7;
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(42, 124);
+            this.lblPassword.Location = new System.Drawing.Point(21, 123);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(71, 16);
             this.lblPassword.TabIndex = 8;
@@ -195,23 +195,23 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(45, 143);
+            this.txtPassword.Location = new System.Drawing.Point(24, 142);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(164, 20);
+            this.txtPassword.Size = new System.Drawing.Size(184, 20);
             this.txtPassword.TabIndex = 9;
             // 
             // txtConfirmPassword
             // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(290, 143);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(272, 142);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(157, 20);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(184, 20);
             this.txtConfirmPassword.TabIndex = 10;
             // 
             // lblConfirmPassword
             // 
             this.lblConfirmPassword.AutoSize = true;
             this.lblConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmPassword.Location = new System.Drawing.Point(287, 124);
+            this.lblConfirmPassword.Location = new System.Drawing.Point(269, 123);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
             this.lblConfirmPassword.Size = new System.Drawing.Size(119, 16);
             this.lblConfirmPassword.TabIndex = 11;

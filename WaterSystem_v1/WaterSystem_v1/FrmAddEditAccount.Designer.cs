@@ -40,7 +40,7 @@
             this.lblMainAccount = new System.Windows.Forms.Label();
             this.cmbMainAccount = new System.Windows.Forms.ComboBox();
             this.lblAccountType = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAccountType = new System.Windows.Forms.TextBox();
             this.pnlTitle.SuspendLayout();
             this.pnlButton.SuspendLayout();
             this.pnlActiveContainer.SuspendLayout();
@@ -130,6 +130,7 @@
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSubmit
             // 
@@ -143,6 +144,7 @@
             this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblMainAccount
             // 
@@ -172,12 +174,12 @@
             this.lblAccountType.TabIndex = 7;
             this.lblAccountType.Text = "Account Type :";
             // 
-            // textBox1
+            // txtAccountType
             // 
-            this.textBox1.Location = new System.Drawing.Point(264, 89);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 20);
-            this.textBox1.TabIndex = 8;
+            this.txtAccountType.Location = new System.Drawing.Point(264, 89);
+            this.txtAccountType.Name = "txtAccountType";
+            this.txtAccountType.Size = new System.Drawing.Size(177, 20);
+            this.txtAccountType.TabIndex = 8;
             // 
             // FrmAddEditAccount
             // 
@@ -185,7 +187,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(502, 191);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtAccountType);
             this.Controls.Add(this.lblAccountType);
             this.Controls.Add(this.cmbMainAccount);
             this.Controls.Add(this.lblMainAccount);
@@ -193,7 +195,9 @@
             this.Controls.Add(this.pnlTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAddEditAccount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmAddEditAccount";
+            this.Load += new System.EventHandler(this.FrmAddEditAccount_Load);
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             this.pnlButton.ResumeLayout(false);
@@ -218,6 +222,6 @@
         private System.Windows.Forms.Label lblMainAccount;
         private System.Windows.Forms.ComboBox cmbMainAccount;
         private System.Windows.Forms.Label lblAccountType;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAccountType;
     }
 }

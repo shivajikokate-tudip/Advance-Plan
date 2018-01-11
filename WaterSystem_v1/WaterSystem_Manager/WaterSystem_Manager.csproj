@@ -49,9 +49,12 @@
     <Compile Include="Receiver\Master\IReciever.cs" />
     <Compile Include="Receiver\Master\ItemReciever.cs" />
     <Compile Include="Receiver\Master\MeasurementReciever.cs" />
+    <Compile Include="Receiver\Master\RootReciever.cs" />
     <Compile Include="Receiver\Master\SubExpencesReciever.cs" />
     <Compile Include="Receiver\Master\SupplierReciever.cs" />
     <Compile Include="Receiver\Master\TransportationReciever.cs" />
+    <Compile Include="Receiver\Master\UserReciever.cs" />
+    <Compile Include="Receiver\Master\VehicleReciever.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

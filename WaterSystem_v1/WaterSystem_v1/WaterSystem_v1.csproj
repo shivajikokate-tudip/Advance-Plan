@@ -50,11 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmAccountDetails.cs">
+    <Compile Include="FrmAccountDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAccountDetails.Designer.cs">
-      <DependentUpon>FrmAccountDetails.cs</DependentUpon>
+    <Compile Include="FrmAccountDetail.Designer.cs">
+      <DependentUpon>FrmAccountDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmAddEditAccount.cs">
       <SubType>Form</SubType>
@@ -140,17 +140,17 @@
     <Compile Include="FrmBoxwiseBottleQuantityDetail.Designer.cs">
       <DependentUpon>FrmBoxwiseBottleQuantityDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCustomerDetails.cs">
+    <Compile Include="FrmCustomerDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCustomerDetails.Designer.cs">
-      <DependentUpon>FrmCustomerDetails.cs</DependentUpon>
+    <Compile Include="FrmCustomerDetail.Designer.cs">
+      <DependentUpon>FrmCustomerDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEmployeeDetails.cs">
+    <Compile Include="FrmEmployeeDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEmployeeDetails.Designer.cs">
-      <DependentUpon>FrmEmployeeDetails.cs</DependentUpon>
+    <Compile Include="FrmEmployeeDetail.Designer.cs">
+      <DependentUpon>FrmEmployeeDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmItemDetails.cs">
       <SubType>Form</SubType>
@@ -158,11 +158,11 @@
     <Compile Include="FrmItemDetails.Designer.cs">
       <DependentUpon>FrmItemDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMeasurementDetails.cs">
+    <Compile Include="FrmMeasurementDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMeasurementDetails.Designer.cs">
-      <DependentUpon>FrmMeasurementDetails.cs</DependentUpon>
+    <Compile Include="FrmMeasurementDetail.Designer.cs">
+      <DependentUpon>FrmMeasurementDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmProductionManage.cs">
       <SubType>Form</SubType>
@@ -182,23 +182,17 @@
     <Compile Include="FrmRowMaterialDetail.Designer.cs">
       <DependentUpon>FrmRowMaterialDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSubAccountDetails.cs">
+    <Compile Include="FrmSubAccountDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSubAccountDetails.Designer.cs">
-      <DependentUpon>FrmSubAccountDetails.cs</DependentUpon>
+    <Compile Include="FrmSubAccountDetail.Designer.cs">
+      <DependentUpon>FrmSubAccountDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSupplierDetails.cs">
+    <Compile Include="FrmSupplierDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSupplierDetails.Designer.cs">
-      <DependentUpon>FrmSupplierDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmTransportation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmTransportation.Designer.cs">
-      <DependentUpon>FrmTransportation.cs</DependentUpon>
+    <Compile Include="FrmSupplierDetail.Designer.cs">
+      <DependentUpon>FrmSupplierDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmTransportationDetail.cs">
       <SubType>Form</SubType>
@@ -246,8 +240,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmAccountDetails.resx">
-      <DependentUpon>FrmAccountDetails.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAccountDetail.resx">
+      <DependentUpon>FrmAccountDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAddEditAccount.resx">
       <DependentUpon>FrmAddEditAccount.cs</DependentUpon>
@@ -291,14 +285,14 @@
     <EmbeddedResource Include="FrmBoxwiseBottleQuantityDetail.resx">
       <DependentUpon>FrmBoxwiseBottleQuantityDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCustomerDetails.resx">
-      <DependentUpon>FrmCustomerDetails.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCustomerDetail.resx">
+      <DependentUpon>FrmCustomerDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDashboard.resx">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEmployeeDetails.resx">
-      <DependentUpon>FrmEmployeeDetails.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEmployeeDetail.resx">
+      <DependentUpon>FrmEmployeeDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInventoryContainer.resx">
       <DependentUpon>FrmInventoryContainer.cs</DependentUpon>
@@ -309,8 +303,8 @@
     <EmbeddedResource Include="FrmMasterContainer.resx">
       <DependentUpon>FrmMasterContainer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMeasurementDetails.resx">
-      <DependentUpon>FrmMeasurementDetails.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMeasurementDetail.resx">
+      <DependentUpon>FrmMeasurementDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProductionManage.resx">
       <DependentUpon>FrmProductionManage.cs</DependentUpon>
@@ -321,14 +315,11 @@
     <EmbeddedResource Include="FrmRowMaterialDetail.resx">
       <DependentUpon>FrmRowMaterialDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSubAccountDetails.resx">
-      <DependentUpon>FrmSubAccountDetails.cs</DependentUpon>
+    <EmbeddedResource Include="FrmSubAccountDetail.resx">
+      <DependentUpon>FrmSubAccountDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSupplierDetails.resx">
-      <DependentUpon>FrmSupplierDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmTransportation.resx">
-      <DependentUpon>FrmTransportation.cs</DependentUpon>
+    <EmbeddedResource Include="FrmSupplierDetail.resx">
+      <DependentUpon>FrmSupplierDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTransportationDetail.resx">
       <DependentUpon>FrmTransportationDetail.cs</DependentUpon>

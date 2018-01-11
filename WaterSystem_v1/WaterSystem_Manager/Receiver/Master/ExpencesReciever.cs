@@ -43,7 +43,7 @@ namespace WaterSystem_Manager.Receiver.Master
             parameters.Add("@Option_Type", model.Option_Type.ToString());
             parameters.Add("@Expences_Name", model.Expences_Name.ToString());
             parameters.Add("@IsActive", model.IsActive.ToString());
-            parameters.Add("@SysFlag", model.SysFlag.ToString());
+            parameters.Add("@SysFlag", model.SysFlag == null? "True": model.SysFlag.ToString());
             parameters.Add("@flag", model.Flag.ToString());
             _expencesRepo.Save(parameters);
         }

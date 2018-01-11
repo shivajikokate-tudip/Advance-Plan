@@ -8,11 +8,11 @@ namespace WaterSystem_Model
 {
     public class CustomerModel: IModel
     {
-        public int Customer_Id { get; set; }
-        public int Customer_No { get; set; }
+        public decimal Customer_Id { get; set; }
+        public decimal Customer_No { get; set; }
         public string Comp_Name { get; set; }
         public string Address { get; set; }
-        public int Cust_Mobileno { get; set; }
+        public decimal Cust_Mobileno { get; set; }
         public string VatNo { get; set; }
         public string TinNo { get; set; }
         public bool IsActive { get; set; }

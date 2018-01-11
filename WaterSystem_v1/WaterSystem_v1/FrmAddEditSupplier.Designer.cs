@@ -136,6 +136,7 @@
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSubmit
             // 
@@ -149,6 +150,7 @@
             this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblNo
             // 
@@ -162,6 +164,7 @@
             // 
             // txtNo
             // 
+            this.txtNo.Enabled = false;
             this.txtNo.Location = new System.Drawing.Point(61, 63);
             this.txtNo.Name = "txtNo";
             this.txtNo.Size = new System.Drawing.Size(100, 20);
@@ -257,7 +260,9 @@
             this.Controls.Add(this.pnlTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAddEditSupplier";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmAddEditSupplier";
+            this.Load += new System.EventHandler(this.FrmAddEditSupplier_Load);
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             this.pnlButton.ResumeLayout(false);

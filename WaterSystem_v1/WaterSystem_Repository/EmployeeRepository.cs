@@ -8,7 +8,7 @@ namespace WaterSystem_Repository
 {
    public class EmployeeRepository: BaseRepository
     {
-        public const string spName = "SP_CustomerMaster";
+        public const string spName = "SP_EmployeeMaster";
         public EmployeeRepository() : base(new DatabaseCommunication(), spName)
         {
 

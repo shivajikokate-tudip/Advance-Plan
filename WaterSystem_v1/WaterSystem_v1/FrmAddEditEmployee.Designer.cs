@@ -33,7 +33,6 @@
             this.pnlButton = new System.Windows.Forms.Panel();
             this.pnlActiveContainer = new System.Windows.Forms.Panel();
             this.pnlActive = new System.Windows.Forms.Panel();
-            this.toggleActive = new JCS.ToggleSwitch();
             this.lblActive = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
@@ -45,10 +44,11 @@
             this.lblJoiningDate = new System.Windows.Forms.Label();
             this.txtMobile = new System.Windows.Forms.TextBox();
             this.lblMobile = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSalary = new System.Windows.Forms.TextBox();
             this.lblSalary = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
+            this.toggleActive = new JCS.ToggleSwitch();
             this.pnlTitle.SuspendLayout();
             this.pnlButton.SuspendLayout();
             this.pnlActiveContainer.SuspendLayout();
@@ -62,7 +62,7 @@
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitle.Location = new System.Drawing.Point(0, 0);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(584, 35);
+            this.pnlTitle.Size = new System.Drawing.Size(573, 35);
             this.pnlTitle.TabIndex = 5;
             // 
             // lblTitle
@@ -70,7 +70,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTitle.Location = new System.Drawing.Point(274, 9);
+            this.lblTitle.Location = new System.Drawing.Point(264, 9);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(42, 18);
             this.lblTitle.TabIndex = 0;
@@ -83,9 +83,9 @@
             this.pnlButton.Controls.Add(this.btnCancel);
             this.pnlButton.Controls.Add(this.btnSubmit);
             this.pnlButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlButton.Location = new System.Drawing.Point(0, 264);
+            this.pnlButton.Location = new System.Drawing.Point(0, 259);
             this.pnlButton.Name = "pnlButton";
-            this.pnlButton.Size = new System.Drawing.Size(584, 46);
+            this.pnlButton.Size = new System.Drawing.Size(573, 46);
             this.pnlButton.TabIndex = 6;
             // 
             // pnlActiveContainer
@@ -106,15 +106,6 @@
             this.pnlActive.Name = "pnlActive";
             this.pnlActive.Size = new System.Drawing.Size(144, 33);
             this.pnlActive.TabIndex = 0;
-            // 
-            // toggleActive
-            // 
-            this.toggleActive.Location = new System.Drawing.Point(65, 6);
-            this.toggleActive.Name = "toggleActive";
-            this.toggleActive.OffFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toggleActive.OnFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toggleActive.Size = new System.Drawing.Size(50, 19);
-            this.toggleActive.TabIndex = 5;
             // 
             // lblActive
             // 
@@ -138,6 +129,7 @@
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSubmit
             // 
@@ -151,12 +143,13 @@
             this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(59, 66);
+            this.lblName.Location = new System.Drawing.Point(46, 59);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(116, 16);
             this.lblName.TabIndex = 7;
@@ -164,7 +157,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(62, 85);
+            this.txtName.Location = new System.Drawing.Point(49, 78);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(204, 20);
             this.txtName.TabIndex = 8;
@@ -173,7 +166,7 @@
             // 
             this.lblBirthDate.AutoSize = true;
             this.lblBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBirthDate.Location = new System.Drawing.Point(294, 63);
+            this.lblBirthDate.Location = new System.Drawing.Point(281, 56);
             this.lblBirthDate.Name = "lblBirthDate";
             this.lblBirthDate.Size = new System.Drawing.Size(66, 16);
             this.lblBirthDate.TabIndex = 9;
@@ -182,7 +175,7 @@
             // dtpBirthDate
             // 
             this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpBirthDate.Location = new System.Drawing.Point(297, 82);
+            this.dtpBirthDate.Location = new System.Drawing.Point(284, 75);
             this.dtpBirthDate.Name = "dtpBirthDate";
             this.dtpBirthDate.Size = new System.Drawing.Size(111, 20);
             this.dtpBirthDate.TabIndex = 10;
@@ -190,7 +183,7 @@
             // dtpJoiningDate
             // 
             this.dtpJoiningDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpJoiningDate.Location = new System.Drawing.Point(437, 82);
+            this.dtpJoiningDate.Location = new System.Drawing.Point(424, 75);
             this.dtpJoiningDate.Name = "dtpJoiningDate";
             this.dtpJoiningDate.Size = new System.Drawing.Size(104, 20);
             this.dtpJoiningDate.TabIndex = 14;
@@ -199,7 +192,7 @@
             // 
             this.lblJoiningDate.AutoSize = true;
             this.lblJoiningDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJoiningDate.Location = new System.Drawing.Point(434, 63);
+            this.lblJoiningDate.Location = new System.Drawing.Point(421, 56);
             this.lblJoiningDate.Name = "lblJoiningDate";
             this.lblJoiningDate.Size = new System.Drawing.Size(89, 16);
             this.lblJoiningDate.TabIndex = 13;
@@ -207,7 +200,7 @@
             // 
             // txtMobile
             // 
-            this.txtMobile.Location = new System.Drawing.Point(62, 140);
+            this.txtMobile.Location = new System.Drawing.Point(49, 133);
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(204, 20);
             this.txtMobile.TabIndex = 12;
@@ -216,24 +209,24 @@
             // 
             this.lblMobile.AutoSize = true;
             this.lblMobile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMobile.Location = new System.Drawing.Point(59, 121);
+            this.lblMobile.Location = new System.Drawing.Point(46, 114);
             this.lblMobile.Name = "lblMobile";
             this.lblMobile.Size = new System.Drawing.Size(55, 16);
             this.lblMobile.TabIndex = 11;
             this.lblMobile.Text = "Mobile :";
             // 
-            // textBox1
+            // txtSalary
             // 
-            this.textBox1.Location = new System.Drawing.Point(297, 140);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(244, 20);
-            this.textBox1.TabIndex = 16;
+            this.txtSalary.Location = new System.Drawing.Point(284, 133);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(244, 20);
+            this.txtSalary.TabIndex = 16;
             // 
             // lblSalary
             // 
             this.lblSalary.AutoSize = true;
             this.lblSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalary.Location = new System.Drawing.Point(294, 121);
+            this.lblSalary.Location = new System.Drawing.Point(281, 114);
             this.lblSalary.Name = "lblSalary";
             this.lblSalary.Size = new System.Drawing.Size(53, 16);
             this.lblSalary.TabIndex = 15;
@@ -241,7 +234,7 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(62, 194);
+            this.txtAddress.Location = new System.Drawing.Point(49, 187);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(479, 49);
@@ -251,21 +244,30 @@
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(59, 175);
+            this.lblAddress.Location = new System.Drawing.Point(46, 168);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(65, 16);
             this.lblAddress.TabIndex = 17;
             this.lblAddress.Text = "Address :";
+            // 
+            // toggleActive
+            // 
+            this.toggleActive.Location = new System.Drawing.Point(65, 6);
+            this.toggleActive.Name = "toggleActive";
+            this.toggleActive.OffFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toggleActive.OnFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toggleActive.Size = new System.Drawing.Size(50, 19);
+            this.toggleActive.TabIndex = 5;
             // 
             // FrmAddEditEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(584, 310);
+            this.ClientSize = new System.Drawing.Size(573, 305);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.lblAddress);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSalary);
             this.Controls.Add(this.lblSalary);
             this.Controls.Add(this.dtpJoiningDate);
             this.Controls.Add(this.lblJoiningDate);
@@ -279,7 +281,9 @@
             this.Controls.Add(this.pnlTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAddEditEmployee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmAddEditEmployee";
+            this.Load += new System.EventHandler(this.FrmAddEditEmployee_Load);
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             this.pnlButton.ResumeLayout(false);
@@ -309,7 +313,7 @@
         private System.Windows.Forms.Label lblJoiningDate;
         private System.Windows.Forms.TextBox txtMobile;
         private System.Windows.Forms.Label lblMobile;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSalary;
         private System.Windows.Forms.Label lblSalary;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label lblAddress;

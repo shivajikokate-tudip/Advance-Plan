@@ -8,7 +8,7 @@ namespace WaterSystem_Repository
 {
     public class SubExpencesRepository: BaseRepository
     {
-        public const string spName = "SP_ExpencesMaster";
+        public const string spName = "SP_SubExpencesMaster";
         public SubExpencesRepository() : base(new DatabaseCommunication(), spName)
         {
 

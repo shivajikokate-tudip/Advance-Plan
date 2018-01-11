@@ -3,22 +3,13 @@ using System.Data;
 
 namespace WaterSystem_Repository
 {
-    public class CustomerRepository
+    public class CustomerRepository: BaseRepository
     {
         DatabaseCommunication communication = null;
         public const string spName = "SP_CustomerMaster";
-        public CustomerRepository()
+        public CustomerRepository():base(new DatabaseCommunication(),spName)
         {
             communication = new DatabaseCommunication();
-        }
-        public DataSet Retrieve()
-        {
-            return communication.blFill(spName);
-        }
-
-        public DataSet Save(Dictionary<string, string> parameters)
-        {
-            return communication.blFill_Para_Name(parameters, spName);
         }
     }
 }

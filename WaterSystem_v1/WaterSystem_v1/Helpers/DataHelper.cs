@@ -666,6 +666,7 @@ namespace WaterSystem_v1.Helpers
 
         public void FillCombo(ComboBox cmb, IEnumerable<DropDown> dataList)
         {
+            cmb.Items.Clear();
             cmb.DisplayMember = GetMemberName((DropDown c) => c.Name);
             cmb.ValueMember = GetMemberName((DropDown c) => c.Value);
             foreach (var data in dataList)

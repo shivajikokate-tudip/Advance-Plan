@@ -46,6 +46,7 @@ namespace WaterSystem_Manager.Receiver.Master
             parameters.Add("@Emp_BirthDate", model.Emp_BirthDate.ToString());
             parameters.Add("@Emp_JoinDate", model.Emp_JoinDate.ToString());
             parameters.Add("@Emp_Sal", model.Emp_Sal.ToString());
+            parameters.Add("@IsCheck", model.IsCheck.ToString());
             parameters.Add("@flag", model.Flag.ToString());
             _empRepo.Save(parameters);
         }

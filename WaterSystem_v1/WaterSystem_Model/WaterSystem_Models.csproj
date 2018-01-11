@@ -44,12 +44,18 @@
     <Compile Include="DropDown.cs" />
     <Compile Include="EmployeeModel.cs" />
     <Compile Include="ExpencesModel.cs" />
+    <Compile Include="GroupModel.cs" />
     <Compile Include="IModel.cs" />
     <Compile Include="ItemModel.cs" />
     <Compile Include="MeasurementModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RootModel.cs" />
+    <Compile Include="SourceModel.cs" />
     <Compile Include="SubExpencesModel.cs" />
     <Compile Include="SupplierModel.cs" />
+    <Compile Include="TransportationModel.cs" />
+    <Compile Include="UserModel.cs" />
+    <Compile Include="VehicleModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

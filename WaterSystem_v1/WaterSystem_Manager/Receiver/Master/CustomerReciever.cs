@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using WaterSystem_Model;
 using WaterSystem_Repository;
 
@@ -15,6 +16,11 @@ namespace WaterSystem_Manager.Receiver.Master
         public IEnumerable<CustomerModel> GetList()
         {
             return ModelConverter.CreateListFromTable<CustomerModel>(_customerRepo.Retrieve().Tables[0]);
+        }
+        
+        public string GetCustomerNumber()
+        {
+            return _customerRepo.Retrieve().Tables[1].Rows[0][0].ToString();
         }
 
         public void Add(CustomerModel model)
@@ -43,8 +49,8 @@ namespace WaterSystem_Manager.Receiver.Master
             parameters.Add("@Comp_Name", model.Comp_Name.ToString());
             parameters.Add("@Address", model.Address.ToString());
             parameters.Add("@Cust_Mobileno", model.Cust_Mobileno.ToString());
-            parameters.Add("@Vat_No", model.VatNo.ToString());
-            parameters.Add("@Tin_No", model.TinNo.ToString());
+            parameters.Add("@Vat_No", model.VatNo!=null? model.VatNo.ToString():"-");
+            parameters.Add("@Tin_No", model.TinNo!=null? model.TinNo.ToString(): "-");
             parameters.Add("@IsActive", model.IsActive.ToString());
             parameters.Add("@flag", model.Flag.ToString());
             _customerRepo.Save(parameters);

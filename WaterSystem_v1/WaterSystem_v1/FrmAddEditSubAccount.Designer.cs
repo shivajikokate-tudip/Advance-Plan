@@ -56,7 +56,7 @@
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitle.Location = new System.Drawing.Point(0, 0);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(482, 35);
+            this.pnlTitle.Size = new System.Drawing.Size(473, 35);
             this.pnlTitle.TabIndex = 4;
             // 
             // lblTitle
@@ -77,9 +77,9 @@
             this.pnlButton.Controls.Add(this.btnCancel);
             this.pnlButton.Controls.Add(this.btnSubmit);
             this.pnlButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlButton.Location = new System.Drawing.Point(0, 197);
+            this.pnlButton.Location = new System.Drawing.Point(0, 172);
             this.pnlButton.Name = "pnlButton";
-            this.pnlButton.Size = new System.Drawing.Size(482, 46);
+            this.pnlButton.Size = new System.Drawing.Size(473, 46);
             this.pnlButton.TabIndex = 5;
             // 
             // pnlActiveContainer
@@ -132,6 +132,7 @@
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSubmit
             // 
@@ -145,12 +146,13 @@
             this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblAccountType
             // 
             this.lblAccountType.AutoSize = true;
             this.lblAccountType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccountType.Location = new System.Drawing.Point(270, 60);
+            this.lblAccountType.Location = new System.Drawing.Point(258, 54);
             this.lblAccountType.Name = "lblAccountType";
             this.lblAccountType.Size = new System.Drawing.Size(97, 16);
             this.lblAccountType.TabIndex = 11;
@@ -159,16 +161,17 @@
             // cmbMainAccount
             // 
             this.cmbMainAccount.FormattingEnabled = true;
-            this.cmbMainAccount.Location = new System.Drawing.Point(65, 80);
+            this.cmbMainAccount.Location = new System.Drawing.Point(53, 74);
             this.cmbMainAccount.Name = "cmbMainAccount";
             this.cmbMainAccount.Size = new System.Drawing.Size(177, 21);
             this.cmbMainAccount.TabIndex = 10;
+            this.cmbMainAccount.SelectedIndexChanged += new System.EventHandler(this.cmbMainAccount_SelectedIndexChanged);
             // 
             // lblMainAccount
             // 
             this.lblMainAccount.AutoSize = true;
             this.lblMainAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMainAccount.Location = new System.Drawing.Point(62, 60);
+            this.lblMainAccount.Location = new System.Drawing.Point(50, 54);
             this.lblMainAccount.Name = "lblMainAccount";
             this.lblMainAccount.Size = new System.Drawing.Size(94, 16);
             this.lblMainAccount.TabIndex = 9;
@@ -177,7 +180,7 @@
             // cmbAccountType
             // 
             this.cmbAccountType.FormattingEnabled = true;
-            this.cmbAccountType.Location = new System.Drawing.Point(273, 80);
+            this.cmbAccountType.Location = new System.Drawing.Point(261, 74);
             this.cmbAccountType.Name = "cmbAccountType";
             this.cmbAccountType.Size = new System.Drawing.Size(177, 21);
             this.cmbAccountType.TabIndex = 12;
@@ -186,7 +189,7 @@
             // 
             this.lblSubAccountType.AutoSize = true;
             this.lblSubAccountType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubAccountType.Location = new System.Drawing.Point(62, 122);
+            this.lblSubAccountType.Location = new System.Drawing.Point(50, 110);
             this.lblSubAccountType.Name = "lblSubAccountType";
             this.lblSubAccountType.Size = new System.Drawing.Size(124, 16);
             this.lblSubAccountType.TabIndex = 13;
@@ -194,7 +197,7 @@
             // 
             // txtSubAccountType
             // 
-            this.txtSubAccountType.Location = new System.Drawing.Point(67, 141);
+            this.txtSubAccountType.Location = new System.Drawing.Point(55, 129);
             this.txtSubAccountType.Name = "txtSubAccountType";
             this.txtSubAccountType.Size = new System.Drawing.Size(175, 20);
             this.txtSubAccountType.TabIndex = 14;
@@ -204,7 +207,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(482, 243);
+            this.ClientSize = new System.Drawing.Size(473, 218);
             this.Controls.Add(this.txtSubAccountType);
             this.Controls.Add(this.lblSubAccountType);
             this.Controls.Add(this.cmbAccountType);
@@ -215,7 +218,9 @@
             this.Controls.Add(this.pnlTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAddEditSubAccount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmAddEditSubAccount";
+            this.Load += new System.EventHandler(this.FrmAddEditSubAccount_Load);
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             this.pnlButton.ResumeLayout(false);

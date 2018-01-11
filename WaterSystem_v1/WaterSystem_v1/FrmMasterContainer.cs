@@ -5,13 +5,14 @@ namespace WaterSystem_v1
 {
     public partial class FrmMasterContainer : Form
     {
-        FrmMeasurementDetails measurement = null;
+        FrmMeasurementDetail measurement = null;
         FrmItemDetails item = null;
-        FrmCustomerDetails customer = null;
-        FrmSupplierDetails supplier = null;
-        FrmEmployeeDetails employee = null;
-        FrmAccountDetails account = null;
-        FrmSubAccountDetails subAccount = null;
+        FrmCustomerDetail customer = null;
+        FrmSupplierDetail supplier = null;
+        FrmEmployeeDetail employee = null;
+        FrmAccountDetail account = null;
+        FrmSubAccountDetail subAccount = null;
+        FrmTransportationDetail transportation;
         public FrmMasterContainer()
         {
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace WaterSystem_v1
                 case Tabs.Measurement:
                     if (measurement == null)
                     {
-                        measurement = new FrmMeasurementDetails();
+                        measurement = new FrmMeasurementDetail();
                         Helpers.FormHelper.OpenForm(tabMeasurement, measurement);
                     }
                     break;
@@ -44,54 +45,60 @@ namespace WaterSystem_v1
                 case Tabs.Customer:
                     if (customer == null)
                     {
-                        customer = new FrmCustomerDetails();
+                        customer = new FrmCustomerDetail();
                         Helpers.FormHelper.OpenForm(tabCustomer, customer);
                     }
                     break;
                 case Tabs.Supplier:
                     if (supplier == null)
                     {
-                        supplier = new FrmSupplierDetails();
+                        supplier = new FrmSupplierDetail();
                         Helpers.FormHelper.OpenForm(tabSupplier, supplier);
                     }
                     break;
                 case Tabs.Employee:
                     if (employee == null)
                     {
-                        employee = new FrmEmployeeDetails();
+                        employee = new FrmEmployeeDetail();
                         Helpers.FormHelper.OpenForm(tabEmployee, employee);
                     }
                     break;
                 case Tabs.Account:
                     if (account == null)
                     {
-                        account = new FrmAccountDetails();
+                        account = new FrmAccountDetail();
                         Helpers.FormHelper.OpenForm(tabAccount, account);
                     }
                     break;
                 case Tabs.SubAccount:
                     if (subAccount == null)
                     {
-                        subAccount = new FrmSubAccountDetails();
+                        subAccount = new FrmSubAccountDetail();
                         Helpers.FormHelper.OpenForm(tabSubAccount, subAccount);
+                    }
+                    break;
+                case Tabs.Transportation:
+                    if (transportation == null)
+                    {
+                        transportation = new FrmTransportationDetail();
+                        Helpers.FormHelper.OpenForm(tabTransportation, transportation);
                     }
                     break;
             }
         }
+    }
 
-        public static class Tabs
-        {
-            public const int Measurement = 0;
-            public const int Item = 1;
-            public const int Customer = 2;
-            public const int Supplier = 3;
-            public const int Employee = 4;
-            public const int Transportation = 5;
-            public const int Account = 6;
-            public const int SubAccount = 7;
-                
-        }
+    public static class Tabs
+    {
+        public const int Measurement = 0;
+        public const int Item = 1;
+        public const int Customer = 2;
+        public const int Supplier = 3;
+        public const int Employee = 4;
+        public const int Transportation = 5;
+        public const int Account = 6;
+        public const int SubAccount = 7;
 
-       
     }
 }
+

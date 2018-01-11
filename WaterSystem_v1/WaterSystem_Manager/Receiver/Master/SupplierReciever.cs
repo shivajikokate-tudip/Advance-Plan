@@ -18,6 +18,11 @@ namespace WaterSystem_Manager.Receiver.Master
             return ModelConverter.CreateListFromTable<SupplierModel>(_supplierRepo.Retrieve().Tables[0]);
         }
 
+        public string GetSupplierNumber()
+        {
+            return _supplierRepo.Retrieve().Tables[1].Rows[0][0].ToString();
+        }
+
         public void Add(SupplierModel model)
         {
             model.Flag = Constants.DbConstants.Add;
@@ -44,8 +49,9 @@ namespace WaterSystem_Manager.Receiver.Master
             parameters.Add("@Comp_Name", model.Comp_Name.ToString());
             parameters.Add("@Address", model.Address.ToString());
             parameters.Add("@Supplier_Mobileno", model.Supplier_Mobileno.ToString());
-            parameters.Add("@Vat_No", model.VatNo.ToString());
-            parameters.Add("@Tin_No", model.TinNo.ToString());
+            parameters.Add("@Vat_No", model.VatNo != null? model.VatNo.ToString():null);
+            parameters.Add("@Tin_No", model.TinNo !=null? model.TinNo.ToString(): null);
+            parameters.Add("@IsActive", model.IsActive.ToString());
             parameters.Add("@flag", model.Flag.ToString());
             _supplierRepo.Save(parameters);
         }

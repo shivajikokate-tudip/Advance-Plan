@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlTransportationContainer = new System.Windows.Forms.Panel();
+            this.pnlListContainer = new System.Windows.Forms.Panel();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.pnlButtonContainer = new System.Windows.Forms.Panel();
             this.pnlButtonLeftContainer = new System.Windows.Forms.Panel();
@@ -37,14 +38,13 @@
             this.pnlClear = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.pnlListContainer = new System.Windows.Forms.Panel();
             this.ovlTransportation = new BrightIdeasSoftware.ObjectListView();
             this.pnlTransportationContainer.SuspendLayout();
+            this.pnlListContainer.SuspendLayout();
             this.pnlTop.SuspendLayout();
             this.pnlButtonContainer.SuspendLayout();
             this.pnlButtonLeftContainer.SuspendLayout();
             this.pnlButtonRight.SuspendLayout();
-            this.pnlListContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ovlTransportation)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +58,15 @@
             this.pnlTransportationContainer.Name = "pnlTransportationContainer";
             this.pnlTransportationContainer.Size = new System.Drawing.Size(658, 360);
             this.pnlTransportationContainer.TabIndex = 0;
+            // 
+            // pnlListContainer
+            // 
+            this.pnlListContainer.Controls.Add(this.ovlTransportation);
+            this.pnlListContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlListContainer.Location = new System.Drawing.Point(0, 167);
+            this.pnlListContainer.Name = "pnlListContainer";
+            this.pnlListContainer.Size = new System.Drawing.Size(658, 193);
+            this.pnlListContainer.TabIndex = 11;
             // 
             // pnlTop
             // 
@@ -136,6 +145,7 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtSearch
             // 
@@ -143,15 +153,6 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(129, 20);
             this.txtSearch.TabIndex = 0;
-            // 
-            // pnlListContainer
-            // 
-            this.pnlListContainer.Controls.Add(this.ovlTransportation);
-            this.pnlListContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlListContainer.Location = new System.Drawing.Point(0, 167);
-            this.pnlListContainer.Name = "pnlListContainer";
-            this.pnlListContainer.Size = new System.Drawing.Size(658, 193);
-            this.pnlListContainer.TabIndex = 11;
             // 
             // ovlTransportation
             // 
@@ -180,12 +181,12 @@
             this.Name = "FrmTransportationDetail";
             this.Text = "FrmTransportationDetail";
             this.pnlTransportationContainer.ResumeLayout(false);
+            this.pnlListContainer.ResumeLayout(false);
             this.pnlTop.ResumeLayout(false);
             this.pnlButtonContainer.ResumeLayout(false);
             this.pnlButtonLeftContainer.ResumeLayout(false);
             this.pnlButtonRight.ResumeLayout(false);
             this.pnlButtonRight.PerformLayout();
-            this.pnlListContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ovlTransportation)).EndInit();
             this.ResumeLayout(false);
 
