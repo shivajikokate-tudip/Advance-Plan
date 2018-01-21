@@ -126,12 +126,13 @@
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancel.Location = new System.Drawing.Point(281, 11);
+            this.btnCancel.Location = new System.Drawing.Point(301, 11);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(80, 25);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSubmit
             // 
@@ -139,12 +140,13 @@
             this.btnSubmit.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSubmit.Location = new System.Drawing.Point(376, 11);
+            this.btnSubmit.Location = new System.Drawing.Point(396, 11);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(80, 25);
             this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // cmbSource
             // 
@@ -153,6 +155,7 @@
             this.cmbSource.Name = "cmbSource";
             this.cmbSource.Size = new System.Drawing.Size(187, 21);
             this.cmbSource.TabIndex = 7;
+            this.cmbSource.SelectedIndexChanged += new System.EventHandler(this.cmbSource_SelectedIndexChanged);
             // 
             // lblSource
             // 
@@ -171,6 +174,7 @@
             this.cmbDestination.Name = "cmbDestination";
             this.cmbDestination.Size = new System.Drawing.Size(189, 21);
             this.cmbDestination.TabIndex = 9;
+            this.cmbDestination.SelectedIndexChanged += new System.EventHandler(this.cmbDestination_SelectedIndexChanged);
             // 
             // lblDestination
             // 
@@ -184,6 +188,7 @@
             // 
             // txtRoot
             // 
+            this.txtRoot.Enabled = false;
             this.txtRoot.Location = new System.Drawing.Point(45, 131);
             this.txtRoot.Name = "txtRoot";
             this.txtRoot.Size = new System.Drawing.Size(187, 20);
@@ -215,7 +220,9 @@
             this.Controls.Add(this.pnlTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAddEditRoot";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmAddEditRoot";
+            this.Load += new System.EventHandler(this.FrmAddEditRoot_Load);
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             this.pnlButton.ResumeLayout(false);

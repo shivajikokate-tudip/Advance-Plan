@@ -19,9 +19,9 @@ namespace WaterSystem_Manager.Receiver.Master
             return ModelConverter.CreateListFromTable<UserModel>(_userRepo.Retrieve().Tables[0]);
         }
 
-        public string GetGroupDetails()
+        public IEnumerable<GroupModel> GetGroupDetails()
         {
-            return _userRepo.Retrieve().Tables[1].Rows[0][0].ToString();
+            return ModelConverter.CreateListFromTable<GroupModel>(_userRepo.Retrieve().Tables[1]);
         }
 
         public void Add(UserModel model)

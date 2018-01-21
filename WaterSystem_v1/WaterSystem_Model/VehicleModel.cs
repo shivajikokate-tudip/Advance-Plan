@@ -9,7 +9,7 @@ namespace WaterSystem_Model
     public class VehicleModel
     {
         public decimal ID { get; set; }
-        public string Vehicle_No { get; set; }
+        public string Vehical_No { get; set; }
         public string Employee_Name { get; set; }
         public string Employee_Address { get; set; }
         public string Contact { get; set; }

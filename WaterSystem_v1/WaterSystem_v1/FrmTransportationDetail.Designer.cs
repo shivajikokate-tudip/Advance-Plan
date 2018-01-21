@@ -30,6 +30,7 @@
         {
             this.pnlTransportationContainer = new System.Windows.Forms.Panel();
             this.pnlListContainer = new System.Windows.Forms.Panel();
+            this.ovlTransportation = new BrightIdeasSoftware.ObjectListView();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.pnlButtonContainer = new System.Windows.Forms.Panel();
             this.pnlButtonLeftContainer = new System.Windows.Forms.Panel();
@@ -38,14 +39,16 @@
             this.pnlClear = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.ovlTransportation = new BrightIdeasSoftware.ObjectListView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.pnlTransportationContainer.SuspendLayout();
             this.pnlListContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ovlTransportation)).BeginInit();
             this.pnlTop.SuspendLayout();
             this.pnlButtonContainer.SuspendLayout();
             this.pnlButtonLeftContainer.SuspendLayout();
             this.pnlButtonRight.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ovlTransportation)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTransportationContainer
@@ -68,8 +71,26 @@
             this.pnlListContainer.Size = new System.Drawing.Size(658, 193);
             this.pnlListContainer.TabIndex = 11;
             // 
+            // ovlTransportation
+            // 
+            this.ovlTransportation.CellEditUseWholeCell = false;
+            this.ovlTransportation.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ovlTransportation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ovlTransportation.HasCollapsibleGroups = false;
+            this.ovlTransportation.Location = new System.Drawing.Point(0, 0);
+            this.ovlTransportation.MenuLabelGroupBy = "";
+            this.ovlTransportation.MenuLabelLockGroupingOn = "";
+            this.ovlTransportation.MenuLabelSortAscending = "";
+            this.ovlTransportation.MenuLabelUnlockGroupingOn = "";
+            this.ovlTransportation.Name = "ovlTransportation";
+            this.ovlTransportation.Size = new System.Drawing.Size(658, 193);
+            this.ovlTransportation.TabIndex = 6;
+            this.ovlTransportation.UseCompatibleStateImageBehavior = false;
+            this.ovlTransportation.View = System.Windows.Forms.View.Details;
+            // 
             // pnlTop
             // 
+            this.pnlTop.Controls.Add(this.panel2);
             this.pnlTop.Controls.Add(this.pnlButtonContainer);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
@@ -154,22 +175,24 @@
             this.txtSearch.Size = new System.Drawing.Size(129, 20);
             this.txtSearch.TabIndex = 0;
             // 
-            // ovlTransportation
+            // panel2
             // 
-            this.ovlTransportation.CellEditUseWholeCell = false;
-            this.ovlTransportation.Cursor = System.Windows.Forms.Cursors.Default;
-            this.ovlTransportation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ovlTransportation.HasCollapsibleGroups = false;
-            this.ovlTransportation.Location = new System.Drawing.Point(0, 0);
-            this.ovlTransportation.MenuLabelGroupBy = "";
-            this.ovlTransportation.MenuLabelLockGroupingOn = "";
-            this.ovlTransportation.MenuLabelSortAscending = "";
-            this.ovlTransportation.MenuLabelUnlockGroupingOn = "";
-            this.ovlTransportation.Name = "ovlTransportation";
-            this.ovlTransportation.Size = new System.Drawing.Size(658, 193);
-            this.ovlTransportation.TabIndex = 6;
-            this.ovlTransportation.UseCompatibleStateImageBehavior = false;
-            this.ovlTransportation.View = System.Windows.Forms.View.Details;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(203)))));
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(658, 108);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 108);
+            this.panel3.TabIndex = 0;
             // 
             // FrmTransportationDetail
             // 
@@ -182,12 +205,13 @@
             this.Text = "FrmTransportationDetail";
             this.pnlTransportationContainer.ResumeLayout(false);
             this.pnlListContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ovlTransportation)).EndInit();
             this.pnlTop.ResumeLayout(false);
             this.pnlButtonContainer.ResumeLayout(false);
             this.pnlButtonLeftContainer.ResumeLayout(false);
             this.pnlButtonRight.ResumeLayout(false);
             this.pnlButtonRight.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ovlTransportation)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -205,5 +229,7 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Panel pnlListContainer;
         private BrightIdeasSoftware.ObjectListView ovlTransportation;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }

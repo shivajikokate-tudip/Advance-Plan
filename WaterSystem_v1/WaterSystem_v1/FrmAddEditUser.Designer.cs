@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.pnlButton = new System.Windows.Forms.Panel();
-            this.pnlActiveContainer = new System.Windows.Forms.Panel();
-            this.pnlActive = new System.Windows.Forms.Panel();
-            this.toggleActive = new JCS.ToggleSwitch();
-            this.lblActive = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.pnlTitle = new System.Windows.Forms.Panel();
@@ -46,15 +42,12 @@
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.lblConfirmPassword = new System.Windows.Forms.Label();
             this.pnlButton.SuspendLayout();
-            this.pnlActiveContainer.SuspendLayout();
-            this.pnlActive.SuspendLayout();
             this.pnlTitle.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlButton
             // 
             this.pnlButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pnlButton.Controls.Add(this.pnlActiveContainer);
             this.pnlButton.Controls.Add(this.btnCancel);
             this.pnlButton.Controls.Add(this.btnSubmit);
             this.pnlButton.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -62,45 +55,6 @@
             this.pnlButton.Name = "pnlButton";
             this.pnlButton.Size = new System.Drawing.Size(482, 46);
             this.pnlButton.TabIndex = 1;
-            // 
-            // pnlActiveContainer
-            // 
-            this.pnlActiveContainer.Controls.Add(this.pnlActive);
-            this.pnlActiveContainer.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlActiveContainer.Location = new System.Drawing.Point(0, 0);
-            this.pnlActiveContainer.Name = "pnlActiveContainer";
-            this.pnlActiveContainer.Size = new System.Drawing.Size(167, 46);
-            this.pnlActiveContainer.TabIndex = 2;
-            // 
-            // pnlActive
-            // 
-            this.pnlActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(91)))));
-            this.pnlActive.Controls.Add(this.toggleActive);
-            this.pnlActive.Controls.Add(this.lblActive);
-            this.pnlActive.Location = new System.Drawing.Point(12, 6);
-            this.pnlActive.Name = "pnlActive";
-            this.pnlActive.Size = new System.Drawing.Size(144, 33);
-            this.pnlActive.TabIndex = 0;
-            // 
-            // toggleActive
-            // 
-            this.toggleActive.Location = new System.Drawing.Point(65, 6);
-            this.toggleActive.Name = "toggleActive";
-            this.toggleActive.OffFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toggleActive.OnFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toggleActive.Size = new System.Drawing.Size(50, 19);
-            this.toggleActive.TabIndex = 5;
-            // 
-            // lblActive
-            // 
-            this.lblActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActive.ForeColor = System.Drawing.Color.White;
-            this.lblActive.Location = new System.Drawing.Point(9, 7);
-            this.lblActive.Name = "lblActive";
-            this.lblActive.Size = new System.Drawing.Size(53, 20);
-            this.lblActive.TabIndex = 5;
-            this.lblActive.Text = "Active";
-            this.lblActive.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnCancel
             // 
@@ -113,6 +67,7 @@
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSubmit
             // 
@@ -126,6 +81,7 @@
             this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // pnlTitle
             // 
@@ -197,6 +153,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(24, 142);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(184, 20);
             this.txtPassword.TabIndex = 9;
             // 
@@ -204,6 +161,7 @@
             // 
             this.txtConfirmPassword.Location = new System.Drawing.Point(272, 142);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.PasswordChar = '*';
             this.txtConfirmPassword.Size = new System.Drawing.Size(184, 20);
             this.txtConfirmPassword.TabIndex = 10;
             // 
@@ -235,10 +193,10 @@
             this.Controls.Add(this.pnlButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAddEditUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmAddEditUser";
+            this.Load += new System.EventHandler(this.FrmAddEditUser_Load);
             this.pnlButton.ResumeLayout(false);
-            this.pnlActiveContainer.ResumeLayout(false);
-            this.pnlActive.ResumeLayout(false);
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             this.ResumeLayout(false);
@@ -249,10 +207,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlButton;
-        private System.Windows.Forms.Panel pnlActiveContainer;
-        private System.Windows.Forms.Panel pnlActive;
-        private JCS.ToggleSwitch toggleActive;
-        private System.Windows.Forms.Label lblActive;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Panel pnlTitle;

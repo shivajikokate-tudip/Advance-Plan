@@ -29,23 +29,26 @@
         private void InitializeComponent()
         {
             this.pnlBoxwiseBottleQuantity = new System.Windows.Forms.Panel();
+            this.pnlListContainer = new System.Windows.Forms.Panel();
+            this.ovlBoxwiseBottleQuantity = new BrightIdeasSoftware.ObjectListView();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.pnlButtonContainer = new System.Windows.Forms.Panel();
             this.pnlButtonRight = new System.Windows.Forms.Panel();
+            this.pnlClear = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.pnlButtonLeftContainer = new System.Windows.Forms.Panel();
             this.btnPreview = new System.Windows.Forms.Button();
-            this.pnlClear = new System.Windows.Forms.Panel();
-            this.pnlListContainer = new System.Windows.Forms.Panel();
-            this.ovlBoxwiseBottleQuantity = new BrightIdeasSoftware.ObjectListView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.pnlBoxwiseBottleQuantity.SuspendLayout();
+            this.pnlListContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ovlBoxwiseBottleQuantity)).BeginInit();
             this.pnlTop.SuspendLayout();
             this.pnlButtonContainer.SuspendLayout();
             this.pnlButtonRight.SuspendLayout();
             this.pnlButtonLeftContainer.SuspendLayout();
-            this.pnlListContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ovlBoxwiseBottleQuantity)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlBoxwiseBottleQuantity
@@ -58,8 +61,35 @@
             this.pnlBoxwiseBottleQuantity.Size = new System.Drawing.Size(585, 415);
             this.pnlBoxwiseBottleQuantity.TabIndex = 0;
             // 
+            // pnlListContainer
+            // 
+            this.pnlListContainer.Controls.Add(this.ovlBoxwiseBottleQuantity);
+            this.pnlListContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlListContainer.Location = new System.Drawing.Point(0, 191);
+            this.pnlListContainer.Name = "pnlListContainer";
+            this.pnlListContainer.Size = new System.Drawing.Size(585, 224);
+            this.pnlListContainer.TabIndex = 11;
+            // 
+            // ovlBoxwiseBottleQuantity
+            // 
+            this.ovlBoxwiseBottleQuantity.CellEditUseWholeCell = false;
+            this.ovlBoxwiseBottleQuantity.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ovlBoxwiseBottleQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ovlBoxwiseBottleQuantity.HasCollapsibleGroups = false;
+            this.ovlBoxwiseBottleQuantity.Location = new System.Drawing.Point(0, 0);
+            this.ovlBoxwiseBottleQuantity.MenuLabelGroupBy = "";
+            this.ovlBoxwiseBottleQuantity.MenuLabelLockGroupingOn = "";
+            this.ovlBoxwiseBottleQuantity.MenuLabelSortAscending = "";
+            this.ovlBoxwiseBottleQuantity.MenuLabelUnlockGroupingOn = "";
+            this.ovlBoxwiseBottleQuantity.Name = "ovlBoxwiseBottleQuantity";
+            this.ovlBoxwiseBottleQuantity.Size = new System.Drawing.Size(585, 224);
+            this.ovlBoxwiseBottleQuantity.TabIndex = 6;
+            this.ovlBoxwiseBottleQuantity.UseCompatibleStateImageBehavior = false;
+            this.ovlBoxwiseBottleQuantity.View = System.Windows.Forms.View.Details;
+            // 
             // pnlTop
             // 
+            this.pnlTop.Controls.Add(this.panel2);
             this.pnlTop.Controls.Add(this.pnlButtonContainer);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
@@ -88,6 +118,17 @@
             this.pnlButtonRight.Name = "pnlButtonRight";
             this.pnlButtonRight.Size = new System.Drawing.Size(424, 54);
             this.pnlButtonRight.TabIndex = 9;
+            // 
+            // pnlClear
+            // 
+            this.pnlClear.BackgroundImage = global::WaterSystem_v1.Properties.Resources.clear1;
+            this.pnlClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlClear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlClear.Location = new System.Drawing.Point(254, 19);
+            this.pnlClear.Name = "pnlClear";
+            this.pnlClear.Size = new System.Drawing.Size(20, 20);
+            this.pnlClear.TabIndex = 3;
             // 
             // btnAdd
             // 
@@ -132,44 +173,26 @@
             this.btnPreview.Text = "Preview";
             this.btnPreview.UseVisualStyleBackColor = false;
             // 
-            // pnlClear
+            // panel2
             // 
-            this.pnlClear.BackgroundImage = global::WaterSystem_v1.Properties.Resources.clear1;
-            this.pnlClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlClear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlClear.Location = new System.Drawing.Point(254, 19);
-            this.pnlClear.Name = "pnlClear";
-            this.pnlClear.Size = new System.Drawing.Size(20, 20);
-            this.pnlClear.TabIndex = 3;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(203)))));
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(585, 137);
+            this.panel2.TabIndex = 1;
             // 
-            // pnlListContainer
+            // panel3
             // 
-            this.pnlListContainer.Controls.Add(this.ovlBoxwiseBottleQuantity);
-            this.pnlListContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlListContainer.Location = new System.Drawing.Point(0, 191);
-            this.pnlListContainer.Name = "pnlListContainer";
-            this.pnlListContainer.Size = new System.Drawing.Size(585, 224);
-            this.pnlListContainer.TabIndex = 11;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 137);
+            this.panel3.TabIndex = 0;
             // 
-            // ovlBoxwiseBottleQuantity
-            // 
-            this.ovlBoxwiseBottleQuantity.CellEditUseWholeCell = false;
-            this.ovlBoxwiseBottleQuantity.Cursor = System.Windows.Forms.Cursors.Default;
-            this.ovlBoxwiseBottleQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ovlBoxwiseBottleQuantity.HasCollapsibleGroups = false;
-            this.ovlBoxwiseBottleQuantity.Location = new System.Drawing.Point(0, 0);
-            this.ovlBoxwiseBottleQuantity.MenuLabelGroupBy = "";
-            this.ovlBoxwiseBottleQuantity.MenuLabelLockGroupingOn = "";
-            this.ovlBoxwiseBottleQuantity.MenuLabelSortAscending = "";
-            this.ovlBoxwiseBottleQuantity.MenuLabelUnlockGroupingOn = "";
-            this.ovlBoxwiseBottleQuantity.Name = "ovlBoxwiseBottleQuantity";
-            this.ovlBoxwiseBottleQuantity.Size = new System.Drawing.Size(585, 224);
-            this.ovlBoxwiseBottleQuantity.TabIndex = 6;
-            this.ovlBoxwiseBottleQuantity.UseCompatibleStateImageBehavior = false;
-            this.ovlBoxwiseBottleQuantity.View = System.Windows.Forms.View.Details;
-            // 
-            // FrmBoxwiseBottleQuantity
+            // FrmBoxwiseBottleQuantityDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -177,16 +200,17 @@
             this.ClientSize = new System.Drawing.Size(585, 415);
             this.Controls.Add(this.pnlBoxwiseBottleQuantity);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmBoxwiseBottleQuantity";
+            this.Name = "FrmBoxwiseBottleQuantityDetail";
             this.Text = "FrmBoxwiseBottleQuantity";
             this.pnlBoxwiseBottleQuantity.ResumeLayout(false);
+            this.pnlListContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ovlBoxwiseBottleQuantity)).EndInit();
             this.pnlTop.ResumeLayout(false);
             this.pnlButtonContainer.ResumeLayout(false);
             this.pnlButtonRight.ResumeLayout(false);
             this.pnlButtonRight.PerformLayout();
             this.pnlButtonLeftContainer.ResumeLayout(false);
-            this.pnlListContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ovlBoxwiseBottleQuantity)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -204,5 +228,7 @@
         private System.Windows.Forms.Button btnPreview;
         private System.Windows.Forms.Panel pnlListContainer;
         private BrightIdeasSoftware.ObjectListView ovlBoxwiseBottleQuantity;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }

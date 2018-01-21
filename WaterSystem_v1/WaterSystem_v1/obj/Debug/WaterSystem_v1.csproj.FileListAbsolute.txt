@@ -54,3 +54,4 @@ D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.csproj.GenerateResource.Cache
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.exe
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.pdb
+D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.FrmTransportationContainer.resources

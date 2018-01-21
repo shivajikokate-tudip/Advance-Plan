@@ -43,7 +43,7 @@ namespace WaterSystem_Manager.Receiver.Master
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();
             parameters.Add("@ID", model.ID.ToString());
-            parameters.Add("@Vehical_No", model.Vehicle_No.ToString());
+            parameters.Add("@Vehical_No", model.Vehical_No.ToString());
             parameters.Add("@Employee_Name", model.Employee_Name.ToString());
             parameters.Add("@Employee_Address", model.Employee_Address.ToString());
             parameters.Add("@Contact", model.Contact.ToString());

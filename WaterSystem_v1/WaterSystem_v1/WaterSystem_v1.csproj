@@ -240,6 +240,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FrmTransportationContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTransportationContainer.Designer.cs">
+      <DependentUpon>FrmTransportationContainer.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmAccountDetail.resx">
       <DependentUpon>FrmAccountDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -342,6 +348,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmTransportationContainer.resx">
+      <DependentUpon>FrmTransportationContainer.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -407,6 +416,8 @@
     <Content Include="Contents\edit.png" />
     <Content Include="Contents\icon.ico" />
     <Content Include="Contents\Logo.png" />
+    <None Include="Contents\user.png" />
+    <None Include="Contents\transportation.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

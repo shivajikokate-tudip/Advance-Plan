@@ -48,7 +48,7 @@ namespace WaterSystem_Manager.Receiver.Master
         {
             Dictionary<string, string> parameters = new Dictionary<string, string>();
             parameters.Add("@RootId", model.RootId.ToString());
-            parameters.Add("@Source", model.SourceName.ToString());
+            parameters.Add("@Source", model.Source.ToString());
             parameters.Add("@Destination", model.DestinationId.ToString());
             parameters.Add("@SourceId", model.Source.ToString());
             parameters.Add("@IsCheck", model.IsCheck.ToString());

@@ -34,7 +34,6 @@
             this.tabCustomer = new System.Windows.Forms.TabPage();
             this.tabSupplier = new System.Windows.Forms.TabPage();
             this.tabEmployee = new System.Windows.Forms.TabPage();
-            this.tabTransportation = new System.Windows.Forms.TabPage();
             this.tabAccount = new System.Windows.Forms.TabPage();
             this.tabSubAccount = new System.Windows.Forms.TabPage();
             this.tabMasterContainer.SuspendLayout();
@@ -47,7 +46,6 @@
             this.tabMasterContainer.Controls.Add(this.tabCustomer);
             this.tabMasterContainer.Controls.Add(this.tabSupplier);
             this.tabMasterContainer.Controls.Add(this.tabEmployee);
-            this.tabMasterContainer.Controls.Add(this.tabTransportation);
             this.tabMasterContainer.Controls.Add(this.tabAccount);
             this.tabMasterContainer.Controls.Add(this.tabSubAccount);
             this.tabMasterContainer.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -110,15 +108,6 @@
             this.tabEmployee.Text = "Employee";
             this.tabEmployee.UseVisualStyleBackColor = true;
             // 
-            // tabTransportation
-            // 
-            this.tabTransportation.Location = new System.Drawing.Point(4, 36);
-            this.tabTransportation.Name = "tabTransportation";
-            this.tabTransportation.Size = new System.Drawing.Size(627, 373);
-            this.tabTransportation.TabIndex = 5;
-            this.tabTransportation.Text = "Transportation";
-            this.tabTransportation.UseVisualStyleBackColor = true;
-            // 
             // tabAccount
             // 
             this.tabAccount.Location = new System.Drawing.Point(4, 36);
@@ -159,7 +148,6 @@
         private System.Windows.Forms.TabPage tabCustomer;
         private System.Windows.Forms.TabPage tabSupplier;
         private System.Windows.Forms.TabPage tabEmployee;
-        private System.Windows.Forms.TabPage tabTransportation;
         private System.Windows.Forms.TabPage tabAccount;
         private System.Windows.Forms.TabPage tabSubAccount;
     }

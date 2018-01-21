@@ -80,5 +80,16 @@ namespace WaterSystem_v1
 
         #endregion
 
+        private void pnlTransporation_Click(object sender, EventArgs e)
+        {
+            FrmTransportationContainer transportationContainer = new FrmTransportationContainer();
+            Helpers.FormHelper.OpenForm(pnlContainer, transportationContainer);
+        }
+
+        private void pnlUser_Click(object sender, EventArgs e)
+        {
+            FrmUserDetail userDetails = new FrmUserDetail();
+            Helpers.FormHelper.OpenForm(pnlContainer, userDetails);
+        }
     }
 }

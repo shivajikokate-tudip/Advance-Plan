@@ -39,6 +39,8 @@
             this.pnlClear = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.pnlContainer.SuspendLayout();
             this.pnlListContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ovlSubAccount)).BeginInit();
@@ -46,6 +48,7 @@
             this.pnlButtonContainer.SuspendLayout();
             this.pnlButtonLeftContainer.SuspendLayout();
             this.pnlButtonRight.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlContainer
@@ -86,6 +89,7 @@
             // 
             // pnlTop
             // 
+            this.pnlTop.Controls.Add(this.panel2);
             this.pnlTop.Controls.Add(this.pnlButtonContainer);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
@@ -170,6 +174,25 @@
             this.txtSearch.Size = new System.Drawing.Size(129, 20);
             this.txtSearch.TabIndex = 0;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(203)))));
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(679, 130);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 130);
+            this.panel3.TabIndex = 0;
+            // 
             // FrmSubAccountDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,6 +211,7 @@
             this.pnlButtonLeftContainer.ResumeLayout(false);
             this.pnlButtonRight.ResumeLayout(false);
             this.pnlButtonRight.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -205,5 +229,7 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Panel pnlListContainer;
         private BrightIdeasSoftware.ObjectListView ovlSubAccount;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }

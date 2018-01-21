@@ -123,6 +123,7 @@ namespace WaterSystem_v1
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(624, 108);
             this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
@@ -231,7 +232,7 @@ namespace WaterSystem_v1
             this.btnPreview.Text = "Preview";
             this.btnPreview.UseVisualStyleBackColor = false;
             // 
-            // FrmMeasurementDetails
+            // FrmMeasurementDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -240,7 +241,7 @@ namespace WaterSystem_v1
             this.Controls.Add(this.pnlOuter);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
-            this.Name = "FrmMeasurementDetails";
+            this.Name = "FrmMeasurementDetail";
             this.Text = "FrmMeasurementDetails";
             this.pnlOuter.ResumeLayout(false);
             this.pnlListContainer.ResumeLayout(false);

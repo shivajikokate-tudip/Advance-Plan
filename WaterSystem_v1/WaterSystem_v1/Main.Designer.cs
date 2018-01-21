@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlLeftPanel = new System.Windows.Forms.Panel();
+            this.pnlLeftBottom = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.lblReports = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -47,7 +48,10 @@
             this.btnLogOut = new System.Windows.Forms.Button();
             this.lblDashboardTitle = new System.Windows.Forms.Label();
             this.pnlContainer = new System.Windows.Forms.Panel();
+            this.pnlTransporation = new System.Windows.Forms.Panel();
+            this.pnlUser = new System.Windows.Forms.Panel();
             this.pnlLeftPanel.SuspendLayout();
+            this.pnlLeftBottom.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.pnlTransactions.SuspendLayout();
@@ -61,6 +65,7 @@
             // pnlLeftPanel
             // 
             this.pnlLeftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(91)))));
+            this.pnlLeftPanel.Controls.Add(this.pnlLeftBottom);
             this.pnlLeftPanel.Controls.Add(this.panel8);
             this.pnlLeftPanel.Controls.Add(this.panel7);
             this.pnlLeftPanel.Controls.Add(this.pnlTransactions);
@@ -72,6 +77,17 @@
             this.pnlLeftPanel.Name = "pnlLeftPanel";
             this.pnlLeftPanel.Size = new System.Drawing.Size(187, 511);
             this.pnlLeftPanel.TabIndex = 2;
+            // 
+            // pnlLeftBottom
+            // 
+            this.pnlLeftBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
+            this.pnlLeftBottom.Controls.Add(this.pnlUser);
+            this.pnlLeftBottom.Controls.Add(this.pnlTransporation);
+            this.pnlLeftBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlLeftBottom.Location = new System.Drawing.Point(0, 465);
+            this.pnlLeftBottom.Name = "pnlLeftBottom";
+            this.pnlLeftBottom.Size = new System.Drawing.Size(187, 46);
+            this.pnlLeftBottom.TabIndex = 6;
             // 
             // panel8
             // 
@@ -281,6 +297,31 @@
             this.pnlContainer.Size = new System.Drawing.Size(747, 456);
             this.pnlContainer.TabIndex = 4;
             // 
+            // pnlTransporation
+            // 
+            this.pnlTransporation.BackColor = System.Drawing.Color.Transparent;
+            this.pnlTransporation.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlTransporation.BackgroundImage")));
+            this.pnlTransporation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlTransporation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTransporation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlTransporation.Location = new System.Drawing.Point(3, 3);
+            this.pnlTransporation.Name = "pnlTransporation";
+            this.pnlTransporation.Size = new System.Drawing.Size(35, 35);
+            this.pnlTransporation.TabIndex = 0;
+            this.pnlTransporation.Click += new System.EventHandler(this.pnlTransporation_Click);
+            // 
+            // pnlUser
+            // 
+            this.pnlUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlUser.BackgroundImage")));
+            this.pnlUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlUser.Location = new System.Drawing.Point(39, 3);
+            this.pnlUser.Name = "pnlUser";
+            this.pnlUser.Size = new System.Drawing.Size(30, 35);
+            this.pnlUser.TabIndex = 1;
+            this.pnlUser.Click += new System.EventHandler(this.pnlUser_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -295,6 +336,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Shiro V1.0";
             this.pnlLeftPanel.ResumeLayout(false);
+            this.pnlLeftBottom.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.pnlTransactions.ResumeLayout(false);
@@ -326,5 +368,8 @@
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblDashboardTitle;
+        private System.Windows.Forms.Panel pnlTransporation;
+        private System.Windows.Forms.Panel pnlLeftBottom;
+        private System.Windows.Forms.Panel pnlUser;
     }
 }

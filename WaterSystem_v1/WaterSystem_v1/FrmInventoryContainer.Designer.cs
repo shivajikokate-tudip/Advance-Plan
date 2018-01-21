@@ -48,6 +48,7 @@
             this.tabInventoryContainer.SelectedIndex = 0;
             this.tabInventoryContainer.Size = new System.Drawing.Size(709, 340);
             this.tabInventoryContainer.TabIndex = 0;
+            this.tabInventoryContainer.Click += new System.EventHandler(this.tabInventoryContainer_Click);
             // 
             // tabRawMaterial
             // 
