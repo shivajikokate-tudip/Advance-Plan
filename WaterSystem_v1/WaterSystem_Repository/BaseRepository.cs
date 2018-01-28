@@ -22,6 +22,11 @@ namespace WaterSystem_Repository
             return _communication.blFill(_spName);
         }
 
+        public DataSet Retrieve(Dictionary<string, string> parameters)
+        {
+            return _communication.blFill_Para_Name(parameters, _spName);
+        }
+
         public DataSet Save(Dictionary<string, string> parameters)
         {
             return _communication.blFill_Para_Name(parameters, _spName);

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace WaterSystem_Repository
 {
-    class RowMaterialRepository: BaseRepository
+    public class RawMaterialRepository : BaseRepository
     {
         public const string spName = "SP_RowMaterialMaster";
-        public RowMaterialRepository() : base(new DatabaseCommunication(), spName)
+        public RawMaterialRepository() : base(new DatabaseCommunication(), spName)
         {
 
         }

@@ -30,8 +30,9 @@
         {
             this.pnlRowMaterial = new System.Windows.Forms.Panel();
             this.pnlListContainer = new System.Windows.Forms.Panel();
-            this.ovlMeasurement = new BrightIdeasSoftware.ObjectListView();
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.pnlButtonContainer = new System.Windows.Forms.Panel();
             this.pnlButtonRight = new System.Windows.Forms.Panel();
             this.pnlClear = new System.Windows.Forms.Panel();
@@ -39,16 +40,15 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.pnlButtonLeftContainer = new System.Windows.Forms.Panel();
             this.btnPreview = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.ovlRowMaterial = new BrightIdeasSoftware.ObjectListView();
             this.pnlRowMaterial.SuspendLayout();
             this.pnlListContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ovlMeasurement)).BeginInit();
             this.pnlTop.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.pnlButtonContainer.SuspendLayout();
             this.pnlButtonRight.SuspendLayout();
             this.pnlButtonLeftContainer.SuspendLayout();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ovlRowMaterial)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlRowMaterial
@@ -63,29 +63,12 @@
             // 
             // pnlListContainer
             // 
-            this.pnlListContainer.Controls.Add(this.ovlMeasurement);
+            this.pnlListContainer.Controls.Add(this.ovlRowMaterial);
             this.pnlListContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlListContainer.Location = new System.Drawing.Point(0, 207);
             this.pnlListContainer.Name = "pnlListContainer";
             this.pnlListContainer.Size = new System.Drawing.Size(643, 227);
             this.pnlListContainer.TabIndex = 11;
-            // 
-            // ovlMeasurement
-            // 
-            this.ovlMeasurement.CellEditUseWholeCell = false;
-            this.ovlMeasurement.Cursor = System.Windows.Forms.Cursors.Default;
-            this.ovlMeasurement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ovlMeasurement.HasCollapsibleGroups = false;
-            this.ovlMeasurement.Location = new System.Drawing.Point(0, 0);
-            this.ovlMeasurement.MenuLabelGroupBy = "";
-            this.ovlMeasurement.MenuLabelLockGroupingOn = "";
-            this.ovlMeasurement.MenuLabelSortAscending = "";
-            this.ovlMeasurement.MenuLabelUnlockGroupingOn = "";
-            this.ovlMeasurement.Name = "ovlMeasurement";
-            this.ovlMeasurement.Size = new System.Drawing.Size(643, 227);
-            this.ovlMeasurement.TabIndex = 6;
-            this.ovlMeasurement.UseCompatibleStateImageBehavior = false;
-            this.ovlMeasurement.View = System.Windows.Forms.View.Details;
             // 
             // pnlTop
             // 
@@ -96,6 +79,25 @@
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(643, 207);
             this.pnlTop.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(203)))));
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(643, 154);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 154);
+            this.panel3.TabIndex = 0;
             // 
             // pnlButtonContainer
             // 
@@ -143,6 +145,7 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtSearch
             // 
@@ -173,24 +176,22 @@
             this.btnPreview.Text = "Preview";
             this.btnPreview.UseVisualStyleBackColor = false;
             // 
-            // panel2
+            // ovlRowMaterial
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(203)))));
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(643, 154);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 154);
-            this.panel3.TabIndex = 0;
+            this.ovlRowMaterial.CellEditUseWholeCell = false;
+            this.ovlRowMaterial.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ovlRowMaterial.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ovlRowMaterial.HasCollapsibleGroups = false;
+            this.ovlRowMaterial.Location = new System.Drawing.Point(0, 0);
+            this.ovlRowMaterial.MenuLabelGroupBy = "";
+            this.ovlRowMaterial.MenuLabelLockGroupingOn = "";
+            this.ovlRowMaterial.MenuLabelSortAscending = "";
+            this.ovlRowMaterial.MenuLabelUnlockGroupingOn = "";
+            this.ovlRowMaterial.Name = "ovlRowMaterial";
+            this.ovlRowMaterial.Size = new System.Drawing.Size(643, 227);
+            this.ovlRowMaterial.TabIndex = 6;
+            this.ovlRowMaterial.UseCompatibleStateImageBehavior = false;
+            this.ovlRowMaterial.View = System.Windows.Forms.View.Details;
             // 
             // FrmRowMaterialDetail
             // 
@@ -204,13 +205,13 @@
             this.Text = "FrmRowMaterialDetail";
             this.pnlRowMaterial.ResumeLayout(false);
             this.pnlListContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ovlMeasurement)).EndInit();
             this.pnlTop.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.pnlButtonContainer.ResumeLayout(false);
             this.pnlButtonRight.ResumeLayout(false);
             this.pnlButtonRight.PerformLayout();
             this.pnlButtonLeftContainer.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ovlRowMaterial)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -227,7 +228,7 @@
         private System.Windows.Forms.Panel pnlButtonLeftContainer;
         private System.Windows.Forms.Button btnPreview;
         private System.Windows.Forms.Panel pnlListContainer;
-        private BrightIdeasSoftware.ObjectListView ovlMeasurement;
+        private BrightIdeasSoftware.ObjectListView ovlRowMaterial;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
     }

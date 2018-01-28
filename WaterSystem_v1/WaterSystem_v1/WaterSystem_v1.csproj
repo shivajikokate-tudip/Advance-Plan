@@ -39,6 +39,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -98,11 +99,11 @@
     <Compile Include="FrmAddEditRoot.Designer.cs">
       <DependentUpon>FrmAddEditRoot.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAddEditRowMateral.cs">
+    <Compile Include="FrmAddEditRowMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAddEditRowMateral.Designer.cs">
-      <DependentUpon>FrmAddEditRowMateral.cs</DependentUpon>
+    <Compile Include="FrmAddEditRowMaterial.Designer.cs">
+      <DependentUpon>FrmAddEditRowMaterial.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmAddEditSubAccount.cs">
       <SubType>Form</SubType>
@@ -270,8 +271,8 @@
     <EmbeddedResource Include="FrmAddEditRoot.resx">
       <DependentUpon>FrmAddEditRoot.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAddEditRowMateral.resx">
-      <DependentUpon>FrmAddEditRowMateral.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAddEditRowMaterial.resx">
+      <DependentUpon>FrmAddEditRowMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAddEditSubAccount.resx">
       <DependentUpon>FrmAddEditSubAccount.cs</DependentUpon>

@@ -43,6 +43,8 @@
     <Compile Include="Constants.cs" />
     <Compile Include="ModelConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receiver\Inventory\BoxQuantityPerBoxReciever.cs" />
+    <Compile Include="Receiver\Inventory\RowMaterialReciever.cs" />
     <Compile Include="Receiver\Master\CustomerReciever.cs" />
     <Compile Include="Receiver\Master\EmployeeReciever.cs" />
     <Compile Include="Receiver\Master\ExpencesReciever.cs" />

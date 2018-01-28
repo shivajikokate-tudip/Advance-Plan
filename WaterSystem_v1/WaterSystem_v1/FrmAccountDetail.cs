@@ -110,5 +110,10 @@ namespace WaterSystem_v1
             FrmAddEditAccount addAccount = new FrmAddEditAccount(reciever.GetList());
             AddEdit(addAccount);
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BottleQuantityPerBoxTypeModel.cs" />
     <Compile Include="CustomerModel.cs" />
     <Compile Include="DropDown.cs" />
     <Compile Include="EmployeeModel.cs" />
@@ -49,7 +50,9 @@
     <Compile Include="ItemModel.cs" />
     <Compile Include="MeasurementModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RawMaterialModel.cs" />
     <Compile Include="RootModel.cs" />
+    <Compile Include="RowHedarModel.cs" />
     <Compile Include="SourceModel.cs" />
     <Compile Include="SubExpencesModel.cs" />
     <Compile Include="SupplierModel.cs" />

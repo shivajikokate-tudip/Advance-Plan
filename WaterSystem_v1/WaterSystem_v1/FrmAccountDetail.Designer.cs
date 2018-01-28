@@ -32,6 +32,8 @@
             this.pnlListContainer = new System.Windows.Forms.Panel();
             this.ovlAccount = new BrightIdeasSoftware.ObjectListView();
             this.pnlTopContainer = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.pnlButtonContainer = new System.Windows.Forms.Panel();
             this.pnlButtonLeftContainer = new System.Windows.Forms.Panel();
             this.btnPreview = new System.Windows.Forms.Button();
@@ -39,16 +41,14 @@
             this.pnlClear = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.pnlContainer.SuspendLayout();
             this.pnlListContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ovlAccount)).BeginInit();
             this.pnlTopContainer.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.pnlButtonContainer.SuspendLayout();
             this.pnlButtonLeftContainer.SuspendLayout();
             this.pnlButtonRight.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlContainer
@@ -97,6 +97,26 @@
             this.pnlTopContainer.Size = new System.Drawing.Size(665, 192);
             this.pnlTopContainer.TabIndex = 0;
             this.pnlTopContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTopContainer_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(203)))));
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(665, 142);
+            this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 142);
+            this.panel3.TabIndex = 0;
             // 
             // pnlButtonContainer
             // 
@@ -175,25 +195,6 @@
             this.txtSearch.Size = new System.Drawing.Size(129, 20);
             this.txtSearch.TabIndex = 0;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(203)))));
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(665, 142);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 142);
-            this.panel3.TabIndex = 0;
-            // 
             // FrmAccountDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,11 +209,11 @@
             this.pnlListContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ovlAccount)).EndInit();
             this.pnlTopContainer.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.pnlButtonContainer.ResumeLayout(false);
             this.pnlButtonLeftContainer.ResumeLayout(false);
             this.pnlButtonRight.ResumeLayout(false);
             this.pnlButtonRight.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

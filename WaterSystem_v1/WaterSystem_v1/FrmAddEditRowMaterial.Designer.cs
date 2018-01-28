@@ -1,6 +1,6 @@
 ﻿namespace WaterSystem_v1
 {
-    partial class FrmAddEditRowMateral
+    partial class FrmAddEditRowMaterial
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmbRowMaterialName = new System.Windows.Forms.ComboBox();
+            this.cmbRowHeaderName = new System.Windows.Forms.ComboBox();
             this.lblRowHeaderName = new System.Windows.Forms.Label();
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlButton = new System.Windows.Forms.Panel();
             this.pnlActiveContainer = new System.Windows.Forms.Panel();
             this.pnlActive = new System.Windows.Forms.Panel();
-            this.toggleActive = new JCS.ToggleSwitch();
             this.lblActive = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.cmbMeasurement = new System.Windows.Forms.ComboBox();
             this.lblMeasurement = new System.Windows.Forms.Label();
-            this.txtRoot = new System.Windows.Forms.TextBox();
+            this.txtRowMaterial = new System.Windows.Forms.TextBox();
             this.lblRowMaterialName = new System.Windows.Forms.Label();
+            this.toggleActive = new JCS.ToggleSwitch();
             this.pnlTitle.SuspendLayout();
             this.pnlButton.SuspendLayout();
             this.pnlActiveContainer.SuspendLayout();
             this.pnlActive.SuspendLayout();
             this.SuspendLayout();
             // 
-            // cmbRowMaterialName
+            // cmbRowHeaderName
             // 
-            this.cmbRowMaterialName.FormattingEnabled = true;
-            this.cmbRowMaterialName.Location = new System.Drawing.Point(40, 77);
-            this.cmbRowMaterialName.Name = "cmbRowMaterialName";
-            this.cmbRowMaterialName.Size = new System.Drawing.Size(187, 21);
-            this.cmbRowMaterialName.TabIndex = 9;
-            this.cmbRowMaterialName.SelectedIndexChanged += new System.EventHandler(this.cmbRowMaterialName_SelectedIndexChanged);
+            this.cmbRowHeaderName.FormattingEnabled = true;
+            this.cmbRowHeaderName.Location = new System.Drawing.Point(40, 77);
+            this.cmbRowHeaderName.Name = "cmbRowHeaderName";
+            this.cmbRowHeaderName.Size = new System.Drawing.Size(187, 21);
+            this.cmbRowHeaderName.TabIndex = 9;
+            this.cmbRowHeaderName.SelectedIndexChanged += new System.EventHandler(this.cmbRowMaterialName_SelectedIndexChanged);
             // 
             // lblRowHeaderName
             // 
@@ -88,7 +88,6 @@
             this.lblTitle.Size = new System.Drawing.Size(42, 18);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "ADD";
-            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
             // 
             // pnlButton
             // 
@@ -121,15 +120,6 @@
             this.pnlActive.Size = new System.Drawing.Size(144, 33);
             this.pnlActive.TabIndex = 0;
             // 
-            // toggleActive
-            // 
-            this.toggleActive.Location = new System.Drawing.Point(65, 6);
-            this.toggleActive.Name = "toggleActive";
-            this.toggleActive.OffFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toggleActive.OnFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toggleActive.Size = new System.Drawing.Size(50, 19);
-            this.toggleActive.TabIndex = 5;
-            // 
             // lblActive
             // 
             this.lblActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -152,6 +142,7 @@
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSubmit
             // 
@@ -165,6 +156,7 @@
             this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // cmbMeasurement
             // 
@@ -184,12 +176,12 @@
             this.lblMeasurement.TabIndex = 12;
             this.lblMeasurement.Text = "Measurement :";
             // 
-            // txtRoot
+            // txtRowMaterial
             // 
-            this.txtRoot.Location = new System.Drawing.Point(40, 137);
-            this.txtRoot.Name = "txtRoot";
-            this.txtRoot.Size = new System.Drawing.Size(187, 20);
-            this.txtRoot.TabIndex = 15;
+            this.txtRowMaterial.Location = new System.Drawing.Point(40, 137);
+            this.txtRowMaterial.Name = "txtRowMaterial";
+            this.txtRowMaterial.Size = new System.Drawing.Size(187, 20);
+            this.txtRowMaterial.TabIndex = 15;
             // 
             // lblRowMaterialName
             // 
@@ -201,23 +193,34 @@
             this.lblRowMaterialName.TabIndex = 14;
             this.lblRowMaterialName.Text = "Row Material Name :";
             // 
-            // FrmAddEditRowMateral
+            // toggleActive
+            // 
+            this.toggleActive.Location = new System.Drawing.Point(65, 6);
+            this.toggleActive.Name = "toggleActive";
+            this.toggleActive.OffFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toggleActive.OnFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toggleActive.Size = new System.Drawing.Size(50, 19);
+            this.toggleActive.TabIndex = 5;
+            // 
+            // FrmAddEditRowMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(516, 226);
-            this.Controls.Add(this.txtRoot);
+            this.Controls.Add(this.txtRowMaterial);
             this.Controls.Add(this.lblRowMaterialName);
             this.Controls.Add(this.cmbMeasurement);
             this.Controls.Add(this.lblMeasurement);
             this.Controls.Add(this.pnlButton);
             this.Controls.Add(this.pnlTitle);
-            this.Controls.Add(this.cmbRowMaterialName);
+            this.Controls.Add(this.cmbRowHeaderName);
             this.Controls.Add(this.lblRowHeaderName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmAddEditRowMateral";
+            this.Name = "FrmAddEditRowMaterial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmAddEditRowMateral";
+            this.Load += new System.EventHandler(this.FrmAddEditRowMaterial_Load);
             this.pnlTitle.ResumeLayout(false);
             this.pnlTitle.PerformLayout();
             this.pnlButton.ResumeLayout(false);
@@ -230,7 +233,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cmbRowMaterialName;
+        private System.Windows.Forms.ComboBox cmbRowHeaderName;
         private System.Windows.Forms.Label lblRowHeaderName;
         private System.Windows.Forms.Panel pnlTitle;
         private System.Windows.Forms.Label lblTitle;
@@ -243,7 +246,7 @@
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.ComboBox cmbMeasurement;
         private System.Windows.Forms.Label lblMeasurement;
-        private System.Windows.Forms.TextBox txtRoot;
+        private System.Windows.Forms.TextBox txtRowMaterial;
         private System.Windows.Forms.Label lblRowMaterialName;
     }
 }

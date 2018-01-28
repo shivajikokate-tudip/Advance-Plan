@@ -26,7 +26,6 @@ D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.FrmAddEditItem.resources
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.FrmAddEditMeasurement.resources
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.FrmAddEditRoot.resources
-D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.FrmAddEditRowMateral.resources
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.FrmAddEditSubAccount.resources
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.FrmAddEditSupplier.resources
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.FrmAddEditTransportation.resources
@@ -42,7 +41,6 @@ D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.FrmMeasurementDetail.resources
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.FrmProductionManage.resources
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.FrmRootDetail.resources
-D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.FrmRowMaterialDetail.resources
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.FrmSubAccountDetail.resources
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.FrmSupplierDetail.resources
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.FrmTransportationDetail.resources
@@ -55,3 +53,5 @@ D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.exe
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.pdb
 D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.FrmTransportationContainer.resources
+D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.FrmAddEditRowMaterial.resources
+D:\WaterRepo\Advance-Plan\WaterSystem_v1\WaterSystem_v1\obj\Debug\WaterSystem_v1.FrmRowMaterialDetail.resources
